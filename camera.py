@@ -2,7 +2,7 @@
 from __future__ import division, print_function
 
 '''
-File name : 2017-05-02_grabing_frames_with_opencv.ipynb
+File name : camera.py
 Authors : Pierre Albiges, Victor Boutin and Laurent Perrinet
 Date created : 2017-04-25
 Date last modified : 2017-05-04

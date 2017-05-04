@@ -10,7 +10,7 @@ import time
 import picamera
 
 client_socket = socket.socket()
-client_socket.connect(('',8000))
+client_socket.connect(('10.164.6.47',8000))
 
 connection = client_socket.makefile('wb')
 try:

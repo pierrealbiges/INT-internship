@@ -9,8 +9,8 @@ import struct
 import time
 import picamera
 
-client.socket = socket.socket()
-client.socket.connect(('Ubunte_server',8000))
+client_socket = socket.socket()
+client_socket.connect(('Ubunte_server',8000))
 
 connection = client_socket.makefile('wb')
 try:

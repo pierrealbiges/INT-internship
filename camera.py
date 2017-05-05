@@ -10,6 +10,8 @@ Object : Apprehend the OpenRetina project through the manipulation of the PhotoR
 
 See https://github.com/laurentperrinet/openRetina/blob/master/src/openRetina.py as source for the program
 See https://github.com/pierrealbiges/INT-internship/ for associated documents
+
+Warning : Raspbian parts are not working for now
 '''
 
 import numpy as np

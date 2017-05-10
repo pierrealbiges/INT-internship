@@ -14,7 +14,6 @@ print('Server connected')
 camera = picamera.PiCamera()
 camera.resolution = (640, 480)
 
-connection = socket.makefile('wb')
 try:
     while True:
         message = socket.recv() #Wait for next request from client
@@ -23,15 +22,15 @@ try:
         if message == 'END':
             break
 
-        stream = io.BytesIO()
-        camera.start_preview()
-        time.sleep(1)
+        for i in range(10):
+            stream = io.BytesIO()
+            camera.start_preview()
+            time.sleep(1)
         
         camera.capture(stream, format='jpeg')
-        print(stream.getvalue())
+        print('dbkey n1', stream.getvalue())
 
-        connection.write(stream.read())
-        socket.send(connection)
+        socket.send(stream.read())
         #socket.send(struct.pack('<L', stream.tell()))
 
 except:

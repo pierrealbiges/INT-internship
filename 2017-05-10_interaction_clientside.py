@@ -24,12 +24,16 @@ while True:
 
 	stream = io.BytesIO()
 	camera.start_preview()
-	time.sleep(1)
+	start = time.time()
 
-	camera.capture(stream, format='jpeg')
-	print('dbkey n1', len(stream.getvalue()))
+	for capture in camera.capture_continuous (stream, format='jpeg'):
+		print('dbkey n1', len(capture.getvalue()))
 
-	print('dbkey n3', stream)
+		if time.time() - start > 5:
+			break
+
+	stream.seek(0)
+	socket.send(stream)
 	#socket.send(struct.pack('<L', stream.tell()))
 
 	time.sleep(1)

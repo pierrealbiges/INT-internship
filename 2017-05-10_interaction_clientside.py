@@ -29,7 +29,7 @@ while True:
 	camera.capture(stream, format='jpeg')
 	print('dbkey n1', len(stream.getvalue()))
 
-	print('dbkey n2', len(stream))
+	#print('dbkey n2', len(stream))
 
 	reply = stream.read()
 

@@ -31,3 +31,6 @@ while True:
 		if time.time() - start > 5:
 			socket.close()
 			break
+
+socket.close()
+Context.term()

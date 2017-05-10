@@ -27,7 +27,7 @@ while True:
 	camera.start_preview()
 	time.sleep(1)
 
-	camera.capture(stream)
+	camera.capture(stream, format='jpeg')
 	print(stream.getvalue())
 
 	socket.send(stream.read())

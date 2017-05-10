@@ -27,7 +27,7 @@ try:
         time.sleep(2)
         
         camera.capture(stream, format='jpeg')
-        print('dbkey n1', stream.getvalue())
+        print('dbkey n1', len(stream.getvalue()))
 
         socket.send(stream.read())
         #socket.send(struct.pack('<L', stream.tell()))

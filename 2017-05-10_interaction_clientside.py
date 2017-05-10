@@ -29,4 +29,5 @@ while True:
 		#socket.send(struct.pack('<L', stream.tell()))
 
 		if time.time() - start > 5:
+			socket.close()
 			break

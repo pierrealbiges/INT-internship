@@ -31,7 +31,11 @@ try:
 	
 	print('dbkey n2', len(stream))
 
-        socket.send(stream.read())
+	reply = stream.read()
+
+        socket.send(reply)
+
+	print('dbkey n3', reply)
         #socket.send(struct.pack('<L', stream.tell()))
 
 	time.sleep(1)

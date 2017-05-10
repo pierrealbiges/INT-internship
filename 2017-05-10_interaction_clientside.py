@@ -28,7 +28,6 @@ while True:
 	time.sleep(1)
 
 	camera.capture(stream, format='jpeg')
-	print(stream.getvalue())
 
 	socket.send(stream.read())
 	#socket.send(struct.pack('<L', stream.tell()))

@@ -29,8 +29,8 @@ while True:
 
 	camera.capture(stream, format='jpeg')
 
-	socket.send(struct.pack('<L',stream.read()))
-	#socket.send(struct.pack('<L', stream.tell()))
+	#socket.send(struct.pack('<L',stream.read()))
+	socket.send(struct.pack('<L', stream.tell()))
 
 
 socket.close()

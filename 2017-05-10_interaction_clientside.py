@@ -27,7 +27,7 @@ try:
 		time.sleep(2)
 
 		stream = io.BytesIO()
-		print(stream.getvalue())
+		print('dbkey n1',.stream.getvalue())
 
 		socket.send(stream.read())
 		#socket.send(struct.pack('<L', stream.tell()))

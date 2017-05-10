@@ -26,6 +26,8 @@ try:
 		camera.start_preview()
 		time.sleep(2)
 
+		camera.capture()
+
 		stream = io.BytesIO()
 		print('dbkey n1',stream.getvalue())
 

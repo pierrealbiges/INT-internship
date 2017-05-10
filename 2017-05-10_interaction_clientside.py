@@ -30,7 +30,7 @@ try:
         camera.capture(stream, format='jpeg')
         print('dbkey n1', stream.getvalue())
 
-        socket.send(stream.read())
+        socket.send(stream)
         #socket.send(struct.pack('<L', stream.tell()))
 
 except:

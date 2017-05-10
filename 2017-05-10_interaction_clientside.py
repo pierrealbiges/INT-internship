@@ -31,7 +31,7 @@ while True:
 
 	#print('dbkey n2', len(stream))
 
-	reply = stream.read()
+	reply = stream.read1()
 
 	socket.send(reply)
 

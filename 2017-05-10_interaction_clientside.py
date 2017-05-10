@@ -25,7 +25,7 @@ while True:
     for capture in camera.capture_continuous(stream, 'jpeg'):
         time.sleep(1)
 
-        socket.send(capture)
+        socket.send(struct.pack('<L',capture))
 #        socket.send(struct.pack('<L', stream.tell()))
         
         if time.time() - start > 10:

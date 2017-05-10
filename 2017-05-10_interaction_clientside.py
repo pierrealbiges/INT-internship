@@ -15,9 +15,6 @@ try:
     message = socket.recv() #Wait for next request from client
     print("Received request: %s" % message)
 
-    if message == 'END':
-        break
-
     camera = picamera.PiCamera()
     camera.resolution = (640, 480)
     camera.start_preview()

@@ -24,8 +24,8 @@ while True:
     stream = io.BytesIO()
     for capture in camera.capture_continuous(stream, 'jpeg'):
 
-        stream.seek(0)
-        socket.send(struct.pack('<L', stream.tell()))
+        socket.send(stream.read)
+#        socket.send(struct.pack('<L', stream.tell()))
         
         if time.time() - start > 5:
             break

@@ -32,6 +32,8 @@ try:
         socket.send(stream.read())
         #socket.send(struct.pack('<L', stream.tell()))
 
+	time.sleep(2)
+
 except:
     socket.close()
     context.term()

@@ -14,26 +14,26 @@ print('Server connected')
 camera = picamera.PiCamera()
 camera.resolution = (640, 480)
 
-try:
-    while True:
-        message = socket.recv() #Wait for next request from client
-        print("Received request: %s" % message)
 
-        
-        if message == 'END':
-            break
+while True:
+	message = socket.recv() #Wait for next request from client
+	print("Received request: %s" % message)
 
-        stream = io.BytesIO()
-        camera.start_preview()
-        time.sleep(1)
-        
-        camera.capture(stream)
-        print(stream.getvalue())
 
-        socket.send(stream.read())
-        #socket.send(struct.pack('<L', stream.tell()))
+	if message == 'END':
+		break
 
-except:
-    socket.close()
-    context.term()
-    print('Socket and context closed')
+	stream = io.BytesIO()
+	camera.start_preview()
+	time.sleep(1)
+
+	camera.capture(stream)
+	print(stream.getvalue())
+
+	socket.send(stream.read())
+	#socket.send(struct.pack('<L', stream.tell()))
+
+
+socket.close()
+context.term()
+print('Socket and context closed')

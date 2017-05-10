@@ -32,7 +32,7 @@ while True:
 		if time.time() - start > 5:
 			break
 
-		socket.send(capture)
+	socket.send(capture)
 	#socket.send(struct.pack('<L', stream.tell()))
 
 	time.sleep(1)

@@ -11,6 +11,9 @@ socket = context.socket(zmq.REP)
 socket.bind("tcp://*:5555")
 print('Server connected')
 
+camera = picamera.PiCamera()
+camera.resolution = (640, 480)
+
 while True:
     message = socket.recv() #Wait for next request from client
     print("Received request: %s" % message)
@@ -18,8 +21,6 @@ while True:
     if message == 'END':
         break
 
-    camera = picamera.PiCamera()
-    camera.resolution = (640, 480)
     camera.start_preview()
     time.sleep(2)
 

@@ -27,5 +27,5 @@ while True:
         socket.send(struct.pack('<L', stream.read())
 #        socket.send(struct.pack('<L', stream.tell()))
         
-	if time.time() - start > 5 :
-		break
+        if time.time() - start > 5:
+            break

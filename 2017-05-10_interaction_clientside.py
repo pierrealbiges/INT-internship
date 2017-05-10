@@ -36,5 +36,4 @@ try:
 except:
     socket.close()
     context.term()
-    connection.close()
     print('Socket and context closed')

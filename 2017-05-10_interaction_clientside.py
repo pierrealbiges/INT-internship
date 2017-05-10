@@ -19,12 +19,13 @@ while True:
 	camera = picamera.PiCamera()
 	camera.resolution = (640, 480)
 	camera.start_preview()
+	time.sleep(2)
 
 	start = time.time()
 	stream = io.BytesIO()
 	for capture in camera.capture_continuous(stream, 'jpeg'):
 
-		socket.send(struct.pack('<L', stream.read()))
+		socket.send(stream.read())
 		#socket.send(struct.pack('<L', stream.tell()))
 
 		if time.time() - start > 5:

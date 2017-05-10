@@ -29,13 +29,7 @@ while True:
 	camera.capture(stream, format='jpeg')
 	print('dbkey n1', len(stream.getvalue()))
 
-	#print('dbkey n2', len(stream))
-
-	reply = stream.read1(-1)
-
-	socket.send(reply)
-
-	print('dbkey n3', reply)
+	print('dbkey n3', stream)
 	#socket.send(struct.pack('<L', stream.tell()))
 
 	time.sleep(1)

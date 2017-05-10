@@ -22,15 +22,14 @@ try:
         if message == 'END':
             break
 
-        for i in range(10):
-            stream = io.BytesIO()
-            camera.start_preview()
-            time.sleep(1)
+        stream = io.BytesIO()
+        camera.start_preview()
+        time.sleep(2)
         
         camera.capture(stream, format='jpeg')
         print('dbkey n1', stream.getvalue())
 
-        socket.send(stream)
+        socket.send(stream.read())
         #socket.send(struct.pack('<L', stream.tell()))
 
 except:

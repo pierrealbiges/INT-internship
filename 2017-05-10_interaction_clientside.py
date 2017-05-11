@@ -32,10 +32,9 @@ while True:
 	#print('dbkey n2', len(stream))
 
 	reply = stream.read1(-1)
+	print('dbkey n3', len(reply))
 
 	socket.send(reply)
-
-	print('dbkey n3', reply)
 	#socket.send(struct.pack('<L', stream.tell()))
 
 	time.sleep(1)

@@ -1,4 +1,7 @@
-''' Pi side'''
+''' Pi side
+
+
+'''
 
 import time
 import zmq
@@ -27,7 +30,6 @@ try:
         time.sleep(0.2)
         
         camera.capture(stream, format='jpeg')
-
         socket.send(stream.getvalue())
 
 except:

@@ -17,7 +17,7 @@ camera.resolution = (640, 480)
 try:
     while True:
         message = socket.recv()
-        print("Received request: n.%s" % message)
+        print("Received request: %s" % message)
 
         if message == 'END':
             break

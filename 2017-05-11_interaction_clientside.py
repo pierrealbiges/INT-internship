@@ -32,7 +32,7 @@ try:
         camera.capture(stream, format='jpeg')
         socket.send(stream.getvalue())
 
-except:
+finally:
     socket.close()
     context.term()
     print('Connection closed')

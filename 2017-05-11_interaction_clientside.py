@@ -15,31 +15,22 @@ camera = picamera.PiCamera()
 camera.resolution = (640, 480)
 
 try:
-	while True:
-		message = socket.recv() #Wait for next request from client
-		print("Received request: %s" % message)
+    while True:
+        message = socket.recv()
+        print("Received request: n.%s" % message)
 
-		if message == 'END':
-			break
+        if message == 'END':
+            break
 
-		stream = io.BytesIO()
-		camera.start_preview()
-		time.sleep(1)
+        stream = io.BytesIO()
+        camera.start_preview()
+        time.sleep(0.2)
+        
+        camera.capture(stream, format='jpeg')
 
-		camera.capture(stream, format='jpeg')
-		print('dbkey n1', len(stream.getvalue()))
+        socket.send(stream.getvalue())
 
-		#print('dbkey n2', len(stream))
-
-		reply = stream.getvalue()
-		print('dbkey n3', len(reply))
-
-		socket.send(reply)
-		#socket.send(struct.pack('<L', stream.tell()))
-
-		time.sleep(1)
-
-finally:
-	socket.close()
-	context.term()
-	print('Socket and context closed')
+except:
+    socket.close()
+    context.term()
+    print('Connection closed')

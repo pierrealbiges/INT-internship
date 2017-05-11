@@ -22,7 +22,7 @@ try:
         message = socket.recv()
         print("Received request: %s" % message)
 
-        if message == 'END':
+        if message == b'END':
             break
 
         stream = io.BytesIO()

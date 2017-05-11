@@ -1,38 +1,15 @@
-''' Pi side
+#! /usr/bin/env python3
+# -*- coding: utf8 -*-
+from __future__ import division, print_function
+"""
+openRetina : a photoreceptor layer
+See https://github.com/laurentperrinet/openRetina
+"""
+__author__ = "(c) Victor Boutin & Laurent Perrinet INT - CNRS"
 
-
-'''
-
-import time
-import zmq
-import picamera
-import struct
-import io
-
-context = zmq.Context()
-socket = context.socket(zmq.REP)
-socket.bind("tcp://*:5555")
-print('Server connected')
-
-camera = picamera.PiCamera()
-camera.resolution = (640, 480)
-
-try:
-    while True:
-        message = socket.recv()
-        print("Received request: %s" % message)
-
-        if message == b'END':
-            break
-
-        stream = io.BytesIO()
-        camera.start_preview()
-        time.sleep(0.2)
-        
-        camera.capture(stream, format='jpeg')
-        socket.send(stream.getvalue())
-
-finally:
-    socket.close()
-    context.term()
-    print('Connection closed')
+from openRetina import openRetina
+phrs = openRetina(model=dict(layer='phrs', # label for this layer
+                             input=['camera'], # input: can be the camera, noise, a movie (TODO)
+                             output=['stream'] # output: can be stream, display, ...
+                             ))
+phrs.run()

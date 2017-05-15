@@ -36,12 +36,11 @@ class PhotoReceptor :
         self.rpi = False
 
         try:
-            print('dbg_key 1')
             ''' Raspbian system '''
             self.server_socket = socket.socket()       #Create a new socket
             self.server_socket.bind(('0.0.0.0', 8000)) #Bind the socket to the adress
             self.server_socket.listen(0)               #Listen the connection made to the socket
-            time.sleep(5)
+            time.sleep(1)
             self.connection = self.server_socket.accept()[0].makefile('rb') #Accept the connection. Socket must be binded and listened
             
         except:

@@ -7,7 +7,7 @@ See https://github.com/laurentperrinet/openRetina
 """
 __author__ = "(c) Pierre Albiges, Victor Boutin & Laurent Perrinet INT - CNRS"
 
-import openRetina
+from openRetina import openRetina
 
 phrs = openRetina(model=dict(layer='phrs', # label for this layer
                              input=['noise'], # input: can be the camera, noise, a movie (TODO)

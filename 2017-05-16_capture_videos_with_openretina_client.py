@@ -6,16 +6,17 @@ import io
 
 context = zmq.Context()
 socket = context.socket(zmq.REP)
-socket.bind("tcp://*:5556")
+socket.bind("tcp://*:5555")
 print('Server connected')
 
-message = socket.recv()
-print('Received request : %s', message)
+try:
+    message = socket.recv()
+    print('Received request : %s', message)
+    
+    Vid = open('video_picam','r')
+    socket.send(Vid)
 
-Vid = open('video_picam','r')
-socket.send(Vid)
-
-
-socket.close()
-context.term()
-print('Connection closed')
+finally:
+    socket.close()
+    context.term()
+    print('Connection closed')

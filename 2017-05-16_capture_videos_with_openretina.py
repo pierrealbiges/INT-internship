@@ -9,4 +9,5 @@ picam.start_recording('video_picam', format='h264') #Start recording in 'filenam
 picam.wait_recording(10) #Better integrated time.wait() that allow to continually check for errors
 picam.stop_recording() #Stop recording
 
+
 print('It went fine!') #Control line

@@ -3,7 +3,7 @@
 import zmq
 
 context = zmq.Context()
-socket = context.socket(zmq.ROUTER)
+router = context.socket(zmq.ROUTER)
 socket_set_hwm(router, 0)
 router.bind("tcp://*:5555")
 print("Connected to computer")

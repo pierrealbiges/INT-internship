@@ -1,22 +1,26 @@
-""" Client side """
+""" Pi side """
 
 import zmq
-import struct
-import io
 
 context = zmq.Context()
-socket = context.socket(zmq.REP)
-socket.bind("tcp://*:5555")
-print('Server connected')
+socket = context.socket(zmq.ROUTER)
+socket_set_hwm(router, 0)
+router.bind("tcp://*:5555")
+print("Connected to computer")
 
 try:
-    message = socket.recv()
-    print('Received request : ', message)
-    
-    vid = open('video_picam','rb')
-    socket.send(vid)
+    file = open("video_picam","r")
+    while True:
+        identity, command = router.recv_multipart()
+        assert command == b"fetch"
+        
+        while True:
+            data = file.read(CHUNCK_SIZE)
+            router.send_multipart([identity, data])
+            if not data:
+                break
 
 finally:
     socket.close()
     context.term()
-    print('Connection closed')
+    print("Connection closed")

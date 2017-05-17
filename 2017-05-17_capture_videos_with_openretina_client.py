@@ -14,12 +14,6 @@ try:
     while True:
         identity, command = router.recv_multipart()
         
-        except zmq.ZMQError as e:
-            if e.errno == zmq.ETERM:
-                return
-            else:
-                raise
-        
         assert command == b"fetch"
         print('Command received')
         

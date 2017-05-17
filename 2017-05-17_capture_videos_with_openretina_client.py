@@ -21,7 +21,7 @@ try:
         print('Command received')
         
         while True:
-            data = file.read(CHUNCK_SIZE)
+            data = file.read(CHUNK_SIZE)
             router.send_multipart([identity, data])
             print('Sending data...')
             if not data:

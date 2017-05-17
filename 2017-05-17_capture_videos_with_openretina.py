@@ -14,6 +14,6 @@ class Rec_video():
         cam.wait_recording(5) #Better integrated time.wait() that allow to continually check for errors
         cam.stop_recording() #Stop recording
 
-        print('Recording end') #Control line
+        print('\nRecording end') #Control line
         
 rec = Rec_video() #Calling the Rec_video class

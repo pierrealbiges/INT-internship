@@ -1,13 +1,14 @@
 """ Pi side """
 
 import zmq
+CHUNK_SIZE = 250000
 
 try:
     context = zmq.Context()
     router = context.socket(zmq.ROUTER)
     
-    router.sndhwm = router.rcvhwm = 250000
-    router.hwm = 250000
+    router.sndhwm = router.rcvhwm = CHUNK_SIZE
+    router.hwm = CHUNK_SIZE
     router.bind("tcp://*:5555")
     print("Connected to computer")
     

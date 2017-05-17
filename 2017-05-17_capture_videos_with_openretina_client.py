@@ -3,8 +3,11 @@
 import zmq
 
 try:
+    print('dgk1')
     context = zmq.Context()
+    print('dgk2')
     router = context.socket(zmq.ROUTER)
+    print('dgk3')
     socket_set_hwm(router, 0)
     router.bind("tcp://*:5555")
     print("Connected to computer")

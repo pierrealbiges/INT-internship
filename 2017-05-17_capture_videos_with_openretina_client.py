@@ -2,13 +2,13 @@
 
 import zmq
 
-context = zmq.Context()
-router = context.socket(zmq.ROUTER)
-socket_set_hwm(router, 0)
-router.bind("tcp://*:5555")
-print("Connected to computer")
-
 try:
+    context = zmq.Context()
+    router = context.socket(zmq.ROUTER)
+    socket_set_hwm(router, 0)
+    router.bind("tcp://*:5555")
+    print("Connected to computer")
+    
     file = open("video_picam","r")
     print('File opened')
     while True:

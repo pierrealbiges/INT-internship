@@ -6,7 +6,7 @@ try:
     context = zmq.Context()
     router = context.socket(zmq.ROUTER)
     
-    router.sndhwm = socket.rcvhwm = 250000
+    router.sndhwm = router.rcvhwm = 250000
     router.hwm = 250000
     router.bind("tcp://*:5555")
     print("Connected to computer")

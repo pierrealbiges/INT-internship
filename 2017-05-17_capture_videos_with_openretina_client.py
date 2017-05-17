@@ -5,7 +5,9 @@ import zmq
 try:
     context = zmq.Context()
     router = context.socket(zmq.ROUTER)
-    socket_set_hwm(router, 0)
+    
+    router.sndhwm = socket.rcvhwm = 250000
+    router.hwm = 250000
     router.bind("tcp://*:5555")
     print("Connected to computer")
     
@@ -26,6 +28,6 @@ try:
                 break
 
 finally:
-    socket.close()
+    router.close()
     context.term()
     print("Connection closed")

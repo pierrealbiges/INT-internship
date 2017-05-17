@@ -27,6 +27,7 @@ try:
             if not data:
                 print('\nNo more data')
                 break
+        if not data: break
 
 finally:
     router.close()

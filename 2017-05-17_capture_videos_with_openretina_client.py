@@ -13,8 +13,8 @@ try:
     message = socket.recv()
     print('Received request : %s', message)
     
-    Vid = open('video_picam','r')
-    socket.send(Vid)
+    vid = open('video_picam','rb')
+    socket.send(vid)
 
 finally:
     socket.close()

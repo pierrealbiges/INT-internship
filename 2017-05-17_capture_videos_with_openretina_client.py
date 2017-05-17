@@ -11,7 +11,7 @@ print('Server connected')
 
 try:
     message = socket.recv()
-    print('Received request : %s', % message)
+    print('Received request : ', message)
     
     vid = open('video_picam','rb')
     socket.send(vid)

@@ -1,6 +1,8 @@
 """ Pi side """
 
+print('dgk0')
 import zmq
+print('dgk-1')
 
 try:
     print('dgk1')

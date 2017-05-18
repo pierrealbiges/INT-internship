@@ -1,7 +1,6 @@
 """ Pi side """
 
 import zmq
-import time
 CHUNK_SIZE = 250000
 
 try:
@@ -22,7 +21,6 @@ try:
         print('Command received')
         
         while True:
-            time.sleep(1)
             data = file.read(CHUNK_SIZE)
             router.send_multipart([identity, data])
             print('Sending data...')

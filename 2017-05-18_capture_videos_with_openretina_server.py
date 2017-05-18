@@ -15,17 +15,16 @@ try:
     total = 0
     chunks = 0
     
+    video = open("video_picam", "r+b")
+    
     while True:
         chunk = dealer.recv()
-        chunk_str = str(chunk) 
-        print(type(chunk), type(chunk_str))
         chunks += 1
         size = len(chunk)
         total += size
         
         print('Chunk %i received, %i bytes' % (chunks, size))
-        with open("video_picam", "wb") as video:
-            video.write(chunk)
+        video.write(chunk)
     
         if size == 0:
             break #Whole file received

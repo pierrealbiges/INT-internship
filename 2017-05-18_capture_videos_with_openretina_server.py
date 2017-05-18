@@ -9,8 +9,7 @@ try:
     dealer.connect('tcp://10.164.7.213:5555')
     print('Connected')
     
-    CHUNK_SIZE = 250000
-    print('Sending request')
+    print('Sending request...')
     dealer.send(b'fetch')
     
     total = 0
@@ -18,12 +17,15 @@ try:
     
     while True:
         chunk = dealer.recv()
+        chunk_str = str(chunk) 
+        print(type(chunk), type(chunk_str))
         chunks += 1
         size = len(chunk)
         total += size
         
         print('Chunk %i received, %i bytes' % (chunks, size))
-        video = open("video_picam", "wb+")
+        with open("video_picam", "wb") as video:
+            video.write(chunk)
     
         if size == 0:
             break #Whole file received

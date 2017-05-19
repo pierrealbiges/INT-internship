@@ -9,7 +9,7 @@ p = subprocess.Popen(['./2017-05-19_using_eventRetina_stacked_camera.py'])
 GCs = subprocess.Popen(['./2017-05-19_using_eventRetina_stacked_GCs.py'])
 
 from eventRetina import eventRetina
-camera = eventRetina(model=dict(layer='A three layered network: retina - GCs - display', # label for this layer
+camera = eventRetina(model=dict(layer='output', title='A three layered network: retina - GCs - display', # label for this layer
                                  input=['stream'], # input: can be the camera, noise, a movie (TODO)
                                  in_port=5556,
                                  output=['display'], # output: can be stream, display, capture,...

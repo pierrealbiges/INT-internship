@@ -12,7 +12,7 @@ try:
     router.bind("tcp://*:5555")
     print("Connected to computer")
     
-    file = open("video_picam","rb")
+    file = open("video_picam2","rb")
     print('File opened')
     while True:
         identity, command = router.recv_multipart()

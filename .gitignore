@@ -1,3 +1,4 @@
 .ipynb_checkpoints
 video_picam
-video.avi
+*.avi
+*.mp4

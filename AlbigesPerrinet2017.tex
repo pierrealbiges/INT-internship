@@ -11,55 +11,24 @@
 % --------------------------------------------------------------------------
 %                    METADATA
 % --------------------------------------------------------------------------
-\newcommand{\AuthorA}{Boutin}%
-\newcommand{\FirstNameA}{Victor}%
-\newcommand{\AuthorB}{Ruffier}%
-\newcommand{\FirstNameB}{Franck}%
-\newcommand{\AuthorC}{Perrinet}%
-\newcommand{\FirstNameC}{Laurent U}%
+\newcommand{\AuthorA}{Albiges}%
+\newcommand{\FirstNameA}{Pierre}%
+\newcommand{\AuthorB}{Perrinet}%
+\newcommand{\FirstNameB}{Laurent}%
+
 \newcommand{\InstituteA}{Aix Marseille Univ, CNRS, INT, Inst Neurosciences Timone, Marseille, France}%
-\newcommand{\InstituteB}{Aix Marseille Univ, CNRS, ISM, Inst Movement Sci, Marseille, France}%
-\newcommand{\InstituteC}{Aix Marseille Univ, CNRS, INT, Inst Neurosciences Timone, Marseille, France}%{Institut de Neurosciences de la Timone\\  (UMR7289) \\ CNRS / Aix-Marseille 
-%\newcommand{\InstituteA}{Aix Marseille Univ, CNRS,\\ INT, Inst Neurosciences Timone\\ Marseille, France}%
-%\newcommand{\InstituteB}{Aix Marseille Univ, CNRS,\\ ISM, Inst Movement Sci,\\ Marseille, France}%
-%\newcommand{\InstituteC}{Aix Marseille Univ, CNRS,\\ INT, Inst Neurosciences Timone\\ Marseille, France}%{Institut de Neurosciences de la Timone\\  (UMR7289) \\ CNRS / Aix-Marseille Universit\'e}%
-\newcommand{\AddressC}{27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}%
-\newcommand{\WebsiteC}{http://invibe.net/LaurentPerrinet}%
-\newcommand{\EmailA}{victor.boutin@univ-amu.fr}%
-\newcommand{\EmailB}{franck.ruffier@univ-amu.fr}%
-\newcommand{\EmailC}{laurent.perrinet@univ-amu.fr}%victor.boutin@univ-amu.fr
-\newcommand{\Title}{Efficient learning of sparse image representations using homeostatic regulation}%
-\newcommand{\Abstract}{
-One core advantage of sparse representations is the efficient coding of complex signals using compact codes. For instance, it allows for the representation of any sample as a combination of few elements drawn from a large dictionary of basis functions. In the context of the efficient processing of natural images, we propose here that sparse coding can be optimised by designing a proper homeostatic rule regulating the competition between the elements of the dictionary. Indeed, a common design for unsupervised learning rules relies on a gradient descent over a cost measuring representation quality with respect to sparseness. The sparseness constraint introduces a competition which can be optimised by ensuring that each item in the dictionary is selected as often as others. We implemented this rule by introducing a gain normalisation similar to what is observed in biological neural networks. We validated this theoretical insight by challenging the matching pursuit sparse coding algorithm with the same learning rule but with or without homeostasis. Simulations show that for a given homeostasis rule, gradient descent performed similarly the learning of a dataset of image patches. While the coding accuracy did not vary much, including homeostasis changed qualitatively the learned features. In particular, homeostasis results in a more homogeneous set of orientation selective filters, which is closer to what is found in the visual cortex of mammals. To further validate these results, we will apply this algorithm to the optimisation of a visual system to be embedded in an aerial robot. In summary, this biologically-inspired learning rule demonstrates that principles observed in neural computations can help improve real-life machine learning algorithms. 
- %The different sparse coding algorithms were chosen for their efficiency and generality. They include least-angle regression, orthogonal matching pursuit and basis pursuit. 
-}
+\newcommand{\InstituteB}{Aix Marseille Univ, CNRS, INT, Inst Neurosciences Timone, Marseille, France}%
+
+\newcommand{\AddressB}{27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}%
+\newcommand{\WebsiteB}{http://invibe.net/LaurentPerrinet}%
+
+\newcommand{\EmailA}{pierre.albiges@etu.univ-amu.fr}%
+\newcommand{\EmailB}{laurent.perrinet@univ-amu.fr}%
+
+\newcommand{\Title}{ }%
+\newcommand{\Abstract}{ }
 \newcommand{\Conference}{ Presented Thursday, 18 May 2017 at {\bf NeuroFrance 2017}, the International Conference from the Soci\'et'e des Neurosciences, Bordeaux, France}%
 \newcommand{\Keywords}{Retina, Sparseness, Computer vision, Aerial robot, Neuroscience}%
-\newcommand{\Acknowledgments}{%
-This work was supported by the Doc2Amu project which received funding from a co-fund with the European Union's Horizon 2020 research and innovation programme and the region Provence Alpes Cote d'Azur. Correspondence and requests for materials should be addressed to LUP (email:\EmailC ). Code and supplementary material available at \url{\WebsiteC/Publications/BoutinRuffierPerrinet17neurofrance}. %spars}.
-} %
-
-
-%\newcommand{\imsize}{0.45\columnwidth}
-%\begin{figure}
-%\begin{center}
-%\begin{tabular}{c c}
-%{\resizebox{\imsize}{!}{\includegraphics{blocks1}}} &
-%{\resizebox{\imsize}{!}{\includegraphics{blocks2}}}\\
-%(a) & (b) \\
-%{\resizebox{\imsize}{!}{\includegraphics{blocks3}}} &
-%{\resizebox{\imsize}{!}{\includegraphics{blocks1a}}}\\
-%(c) & (d) \\
-%\end{tabular}
-%\end{center}
-%\caption{ Parts (a) through (c) show three images consisting of squares of
-%different sizes;
-%(d) shows the pattern spectra, denoting the number of foreground pixels 
-% removed by openings by reconstruction by $\lambda \times \lambda$ squares. No 
-%granulometry is capable of separating the patterns, because the only 
-%differences between the images lie in the distributions of the 
-%connected components. }\label{fig:blocks}
-%\end{figure}
 
 \newcommand{\FigureMap}{%
 %------------------------------%
@@ -140,9 +109,9 @@ It is observed that simple cell neurones in mammalian primary visual cortex are 
 \mathcal{C}_0( \coef | \image , \dico) = \frac{1}{2\sigma_n^2} \| \image - \dico \coef \|^2 + \lambda \| \coef \|_0 \nonumber%
 \end{equation}%
 During the early learning phase, some cells may learn ``faster'' than others. There is the need for a homeostasis mechanism that will ensure convergence of learning. The goal of this work is to study the specific role of homeostasis in learning sparse representations and to propose a homeostasis mechanism which optimises the learning of an efficient neural representation.%
-}%
+
 \newcommand{\ParagLongIntro}{%
-It is observed that simple cell neurones in mammalian primary visual cortex are selective to orientation, spatial localisation, and frequencies~\citep{hubel1968receptive}. It is demonstrated that developing a coding strategy that maximises sparseness is sufficient to form receptive fields that account for all three of the above properties~\citep{olshausen1996emergence}. Visual items composing natural images are often sparse, such that the brain may use this sparseness to reconstruct images with only a few set of these items~\citep{Perrinet15bicv}. This is supporting the idea that an unsupervised learning algorithm based on sparse coding could be use to describe efficiently image processing in the primary visual cortex.
+It is observed that simple cell neurones in mammalian primary visual cortex are selective to orientation, spatial localisation, and frequencies~\citep{hubel1968receptive}. It is demonstrated that developing a coding strategy that maximises sparseness is sufficient to form receptive fields that account for all three of the above properties~\citep{olshausen1996emergence}. Visual items composing natural images are often sparse, such that the brain may use this sparseness to reconstruct images with only a few set of these items~\citep{Perrinet15bicv}. This is supporting the idea that an unsupervised learning algorithm based on sparse coding could be use to describe efficiently image processing in the primary visual cortex.}%
 
 Most of existing models of unsupervised learning aim at optimising a cost defined on prior assumptions on representation's sparseness. For instance, learning is accomplished in {\sc SparseNet}~\citep{Olshausen97} on patches taken from natural images as a sequence of coding and learning steps. First, knowing a dictionary of receptive fields $\dico_i$, the sparse coding is achieved using a gradient descent over a convex cost derived from a sparse prior probability distribution function of the coefficients $a_i$. Then, knowing this sparse solution, learning is defined as slowly changing the dictionary using Hebbian learning. In general, the parameterisation of the prior has major impacts on results of the sparse coding and thus on the emergence of edge-like receptive fields and requires proper tuning. In fact, the definition of the prior corresponds to an objective sparseness and does not always fit to the observed probability distribution function of the coefficients. In particular, this could be a problem \emph{during} learning if we use the cost to measure representation efficiency for this learning step. An alternative is to use a more generic $\ell_0$ norm sparseness, by simply counting the number of non-zero coefficients:
 \begin{equation}%
@@ -158,10 +127,11 @@ We compared qualitatively the set $\dico$ of receptive filters generated by the 
 %##################################################################################################################################
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[8pt, landscape,\Draft]{sciposter}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{amsmath}
-\usepackage{amssymb}
+%\usepackage[dvipsnames]{x}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
 \usepackage{multicol}
+\usepackage{xcolor}
 %\documentclass[a4paper, 11pt]{article} % For LaTeX2e
 %\usepackage{times}
 \usepackage[utf8]{luainputenc}
@@ -186,9 +156,8 @@ We compared qualitatively the set $\dico$ of receptive filters generated by the 
 \usepackage[unicode,linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,pdfborder={0 0 0}]{hyperref}%
 \hypersetup{%
 pdftitle={\Title},%
-pdfauthor={Corrresponding author: \AuthorC < \EmailC > \AddressC - \WebsiteC },%
-pdfkeywords={\Keywords},%
-pdfsubject={\Acknowledgments}%
+pdfauthor={Corrresponding author: \AuthorB < \EmailB > \AddressB - \WebsiteB },%
+pdfkeywords={\Keywords}%
 }%
 \usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
@@ -284,15 +253,13 @@ pdfsubject={\Acknowledgments}%
 % use a multiple column layout for up to three different
 % affiliations
 \author{
-%{\FirstNameA\ \AuthorA}
-{\color{MidnightBlue} \FirstNameA\ \AuthorA\ } 
-{\color{OliveGreen} \FirstNameB\ \AuthorB\ }
-{\color{MidnightBlue}  \FirstNameC\ \AuthorC\ }
+{\FirstNameA\ \AuthorA\ } 
+{\FirstNameB\ \AuthorB\ }
 }
 
 \institute{
-{\color{MidnightBlue} \InstituteA }  --- % \\
-{\color{OliveGreen} \InstituteB }
+{\InstituteA }  --- % \\
+{\InstituteB }
 }           
 \begin{document}
 %\conference{ Presented Thursday, 18 May 2017 at {\bf NeuroFrance 2017}, the International Conference from the Soci\'et'e des Neurosciences, Bordeaux, France}
@@ -317,15 +284,6 @@ pdfsubject={\Acknowledgments}%
 %
 %\ParagIntro
 
-% use section* for acknowledgement
-\section*{Acknowledgment}
-
-\Acknowledgments
-%
-%\appendix
-\printbibliography
-
-\columnbreak
 \section{Learning on natural images}
 \FigureMap
 
@@ -339,5 +297,4 @@ pdfsubject={\Acknowledgments}%
 
 % that's all folks
 \end{multicols}
-
 \end{document}

@@ -1,6 +1,6 @@
 %!TeX TS-program = Lualatex
 %!TeX encoding = UTF-8 Unicode
-%!TeX spellcheck = en-US
+%!TeX spellcheck = fr
 %!BIB TS-program = bibtex
 % -*- coding: UTF-8; -*-
 % vim: set fenc=utf-8
@@ -11,47 +11,43 @@
 % --------------------------------------------------------------------------
 %                    METADATA
 % --------------------------------------------------------------------------
-\newcommand{\AuthorA}{Albiges}%
-\newcommand{\FirstNameA}{Pierre}%
-\newcommand{\AuthorB}{Perrinet}%
-\newcommand{\FirstNameB}{Laurent}%
+\newcommand{\AuthorA}{Albiges}
+\newcommand{\FirstNameA}{Pierre}
+\newcommand{\AuthorB}{Perrinet}
+\newcommand{\FirstNameB}{Laurent}
 
-\newcommand{\InstituteA}{Aix Marseille Univ, CNRS, INT, Inst Neurosciences Timone, Marseille, France}%
-\newcommand{\InstituteB}{Aix Marseille Univ, CNRS, INT, Inst Neurosciences Timone, Marseille, France}%
+\newcommand{\InstituteA}{Aix Marseille Univ., Master 1 de Neurosciences Intégratives et Cognitives}
+\newcommand{\InstituteB}{Aix Marseille Univ., CNRS, INT, Inst Neurosciences Timone, Marseille, France}
 
-\newcommand{\AddressB}{27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}%
-\newcommand{\WebsiteB}{http://invibe.net/LaurentPerrinet}%
+\newcommand{\AddressB}{27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}
+\newcommand{\WebsiteB}{http://invibe.net/LaurentPerrinet}
 
-\newcommand{\EmailA}{pierre.albiges@etu.univ-amu.fr}%
-\newcommand{\EmailB}{laurent.perrinet@univ-amu.fr}%
+\newcommand{\EmailA}{pierre.albiges@etu.univ-amu.fr}
+\newcommand{\EmailB}{laurent.perrinet@univ-amu.fr}
 
-\newcommand{\Title}{ }%
-\newcommand{\Abstract}{ }
-\newcommand{\Conference}{ Presented Thursday, 18 May 2017 at {\bf NeuroFrance 2017}, the International Conference from the Soci\'et'e des Neurosciences, Bordeaux, France}%
-\newcommand{\Keywords}{Retina, Sparseness, Computer vision, Aerial robot, Neuroscience}%
+\newcommand{\Title}{Modèle de rétine neuromimétique basé sur l'utilisation de logiciels Open-source}
+\newcommand{\Conference}{Présenté le jeudi, 15 juin 2017 à l'Université d'Aix-Marseille, Marseille, France}
+\newcommand{\Keywords}{Rétine, Biomimétisme, RaspBerry Pi, Neurosciences computationnelles, Python}
 
-\newcommand{\FigureMap}{%
-%------------------------------%
-%: see Figure~\ref{fig:homeostasis}
-\begin{figure}%[!ht]%%[p!]
+% --------------------------------------------------------------------------
+%                    FIGURES
+% --------------------------------------------------------------------------
+
+\newcommand{\FigureUnprocPic}{
+\begin{figure}
 \centering{
 \begin{tikzpicture}
-\draw [anchor=north west] (0, .9\linewidth) node {\includegraphics[width=.8\linewidth]{ssc_nohomeo}};
-\draw [anchor=north west] (0, 0) node {\includegraphics[width=.8\linewidth]{ssc_homeo}};
-\draw (0, .9\linewidth) node [above right=0mm] {$\mathsf{A}$};
-\draw (0, .0\linewidth) node [above right=0mm] {$\mathsf{B}$};
+\draw [anchor=north west] (0, .9\linewidth) node {\includegraphics[width=.8\linewidth]{unproc_fig.png}};
+%\draw (0, .9\linewidth) node [above right=0mm] {$\mathsf{A}$};
 \end{tikzpicture}}
 \caption{
-{\bf Role of homeostasis in learning sparse representations}: 
-We show the results of Sparse Hebbian Learning using two different homeostasis algorithms at convergence (20000 learning steps). 324 filters of the same size as the image patches ($16 \times 16$) are presented in a matrix (separated by a white border). Note that their position in the matrix is arbitrary as in ICA. {\sf (A)} When switching off the cooperative homeostasis during learning, the corresponding Sparse Hebbian Learning algorithm converges to a set of filters that contains some less localized filters and some high-frequency Gabor functions that correspond to more ``textural'' features. One may wonder if these filters are inefficient and capturing noise or if they rather correspond to independent features of natural images in the LGM model. {\sf (B)} Results with the same coding and learning algorithm but by enabling homeostasis. % 
-\label{fig:map}}%
-\end{figure}%
-%%------------------------------%
-}%
-\newcommand{\FigureQuant}{%
-%------------------------------%
-%: see Figure~\ref{fig:homeostasis}
-\begin{figure}[!ht]%%[p!]
+(...)
+\label{fig:map}}
+\end{figure}
+}
+
+\newcommand{\FigureQuant}{
+\begin{figure}[!ht]
 \centering{
 \begin{tikzpicture}
 \draw [anchor=north west] (0, .8\linewidth) node {\includegraphics[width=\linewidth]{PDF_nohomeo}};
@@ -62,19 +58,13 @@ We show the results of Sparse Hebbian Learning using two different homeostasis a
 \draw (0, -.1\linewidth) node [above right=0mm] {$\mathsf{C}$};
 \end{tikzpicture}}
 \caption{
-{\bf Quantitative role of homeostasis in sparse coding}: We show the results of Sparse Coding using the two different homeostasis algorithms using surrogate data where each filter was equiprobable but for which we manipulated the first half of the coefficients to be artificially twice as big. %
-{\sf (A)}~Such a situation replicates a situation arising during learning when a sub-group of filters is more active, e.~g. because it learned more salient features.  Here, we show the probability of the selection of the different filters (normalised to an average of $1$) which shows a bias of the standard Matching Pursuit to select more often filters whose activity is higher. %We evaluated the efficiency of retrieving the correct coefficients to about $\ %
-{\sf (B)}~Non-linear homeostatic functions learned using Hebbian learning. These functions were initialised as the cumulative distribution function of uniform random variables. Then they are used to modify choices in the Matching step of the Matching Pursuit algorithm. Progressively, the non-linear functions converge to the (hidden) cumulative distributions of the coefficients of the surrogate, clearly showing the group of filters with twice a big coefficients. 
- {\sf (C)}~At convergence, the probability of choosing any filter is uniform. As a result, entropy is maximal, a property which is essential for the optimal representation of signals in distributed networks such as the brain.
-\label{fig:quant}}%
-\end{figure}%
-%%------------------------------%
-}%
+(...)
+\label{fig:quant}}
+\end{figure}
+}
 
-\newcommand{\FigureMNIST}{%
-%------------------------------%
-%: see Figure~\ref{fig:homeostasis}
-\begin{figure}[!ht]%%[p!]
+\newcommand{\FigureMNIST}{
+\begin{figure}[!ht]
 \centering{
 \begin{tikzpicture}
 \draw [anchor=north west] (0, .47\linewidth) node {\includegraphics[width=.47\linewidth]{dico_MP}};
@@ -87,63 +77,58 @@ We show the results of Sparse Hebbian Learning using two different homeostasis a
 \draw (.1\linewidth, -.62\linewidth) node [above right=0mm] {$\mathsf{D}$};
 \end{tikzpicture}}
 \caption{
-{\bf Quantitative role of homeostasis in a classification network}: We used the generic MNIST protocol to assess the role of the homeostasis algorithm on classification. %
- {\sf (A-C)}~144 dictionaries learned from the MNIST database with a sparseness of 5 after 10000 iterations with {\sf (A)}~MP Algorithm ($\eta=0.01$): No homeostasis regulation, only a small subset of dictionaries are selected with a high probability to describe the dataset.
-{\sf (B)}~SPARSENET Algorithm ($\eta=0.01$, $\eta_h=0.01$, $\alpha_h=0.02$): The homeostasis regulation is made by normalizing the volatility.
-{\sf (C)}~MEUL Algorithm ($\eta=0.01$, $\eta_h=0.01$): All dictionaries are selected with the same probability to describe the dataset, leading to a cooperative learning.
- {\sf (D)}~Comparison of the reconstruction error (computed as the square root of the squared difference between the image and the residual) for the 3 algorithms (MEUL, SPARSENET, MP): The convergence velocity of MEUL is higher than SPARSENET and MP.
-\label{fig:quant}}%
-\end{figure}%
-%%------------------------------%
-}%
+(...)
+\label{fig:quant}}
+\end{figure}
+}
 
+% --------------------------------------------------------------------------
+%                    SECTIONS
+% --------------------------------------------------------------------------
 
-\newcommand{\coef}{\mathbf{a}} % image's hidden param
-\newcommand{\image}{\mathbf{I}} % the image
-\newcommand{\dico}{\Phi} % the dictionary
+\newcommand{\ParagMotivBio}{
+Biomimétisme?\\
+Reproduire les fonctions et les capacités du vivant dans ses systèmes artificiels afin d'améliorer leurs performances.
+}
 
+\newcommand{\ParagMethComp}{
+grab (picam, cam ou video)\\
+\FigureUnprocPic
+process (réduire la quantité d'informations transmises afin d'accélerer la temporalité de la perception)\\
+networking\\
+displaying
+}
 
-\newcommand{\ParagIntro}{%
-It is observed that simple cell neurones in mammalian primary visual cortex are selective to orientation, spatial localisation, and frequencies~\citep{hubel1968receptive}. It is demonstrated that developing a coding strategy that maximises sparseness is sufficient to form receptive fields that account for all three of the above properties~\citep{olshausen1996emergence}. Visual items composing natural images are often sparse, such that the brain may use this sparseness to reconstruct images with only a few set of these items~\citep{Perrinet15bicv}. This is supporting the idea that an unsupervised learning algorithm based on sparse coding could be use to describe efficiently image processing in the primary visual cortex. Llearning is accomplished in {\sc SparseNet}~\citep{Olshausen97} on patches taken from natural images as a sequence of coding and learning steps. First, knowing a dictionary of receptive fields $\dico_i$, the sparse coding is achieved using a gradient descent over a convex cost derived from a sparse prior probability distribution function of the coefficients $a_i$, where we use the generic $\ell_0$ norm sparseness, by simply counting the number of non-zero coefficients:
-\begin{equation}%
-\mathcal{C}_0( \coef | \image , \dico) = \frac{1}{2\sigma_n^2} \| \image - \dico \coef \|^2 + \lambda \| \coef \|_0 \nonumber%
-\end{equation}%
-During the early learning phase, some cells may learn ``faster'' than others. There is the need for a homeostasis mechanism that will ensure convergence of learning. The goal of this work is to study the specific role of homeostasis in learning sparse representations and to propose a homeostasis mechanism which optimises the learning of an efficient neural representation.%
+\newcommand{\ParagAmelio}{
+Travailler avec des videos pour réaliser des traitements hors-ligne\\
+Réaliser un "benchmark" pour contrôler l'influence de certains paramètres\\
+Architecture en couches
+}
 
-\newcommand{\ParagLongIntro}{%
-It is observed that simple cell neurones in mammalian primary visual cortex are selective to orientation, spatial localisation, and frequencies~\citep{hubel1968receptive}. It is demonstrated that developing a coding strategy that maximises sparseness is sufficient to form receptive fields that account for all three of the above properties~\citep{olshausen1996emergence}. Visual items composing natural images are often sparse, such that the brain may use this sparseness to reconstruct images with only a few set of these items~\citep{Perrinet15bicv}. This is supporting the idea that an unsupervised learning algorithm based on sparse coding could be use to describe efficiently image processing in the primary visual cortex.}%
-
-Most of existing models of unsupervised learning aim at optimising a cost defined on prior assumptions on representation's sparseness. For instance, learning is accomplished in {\sc SparseNet}~\citep{Olshausen97} on patches taken from natural images as a sequence of coding and learning steps. First, knowing a dictionary of receptive fields $\dico_i$, the sparse coding is achieved using a gradient descent over a convex cost derived from a sparse prior probability distribution function of the coefficients $a_i$. Then, knowing this sparse solution, learning is defined as slowly changing the dictionary using Hebbian learning. In general, the parameterisation of the prior has major impacts on results of the sparse coding and thus on the emergence of edge-like receptive fields and requires proper tuning. In fact, the definition of the prior corresponds to an objective sparseness and does not always fit to the observed probability distribution function of the coefficients. In particular, this could be a problem \emph{during} learning if we use the cost to measure representation efficiency for this learning step. An alternative is to use a more generic $\ell_0$ norm sparseness, by simply counting the number of non-zero coefficients:
-\begin{equation}%
-\mathcal{C}_0( \coef | \image , \dico) = \frac{1}{2\sigma_n^2} \| \image - \dico \coef \|^2 + \lambda \| \coef \|_0 \nonumber%
-\end{equation}%
-It was found that by using an algorithm like Matching Pursuit, the learning algorithm could provide results similar to {\sc SparseNet}, but without the need of parametric assumptions on the prior~\citep{Perrinet10shl}. However, we observed that this class of algorithms could lead to solutions corresponding to a local minimum of the objective function: Some solutions seem as efficient as others for representing the signal but do not represent edge-like features homogeneously. In particular, during the early learning phase, some cells may learn ``faster'' than others. There is the need for a homeostasis mechanism that will ensure convergence of learning. The goal of this work is to study the specific role of homeostasis in learning sparse representations and to propose a homeostasis mechanism which optimises the learning of an efficient neural representation.%
-
-To achieve this, we first formulate analytically the problem of representation efficiency in a population of sensory neurones. For the particular $\ell_0$ norm sparseness, we show that sparseness is optimal, in term of Shannon entropy, when average activity within the neural population is uniformly balanced (i.e. each neurone is selected with the same probability when encoding a large set of data). To achieve this uniformity, we define an homeostatic gain control mechanism based on histogram equalisation, that is in transforming coefficients in terms of z-scores $z_i(a_i) = P( \cdot > a_i)$. The cumulative distribution $z_i$ for each coefficient of the sparse vector is calculated using Hebbian learning to smooth its evolution during learning. At the coding level, this z-score function is incorporated in the matching step of the matching pursuit algorithm, to modulate the choice of the most  as that with the maximal z-score: $i^\ast = \mathrm{Argmax}_i z_i(a_i)$. The rest of the algorithm is left unchanged.
-
-We compared qualitatively the set $\dico$ of receptive filters generated by the proposed algorithm when the homeostasis is first turned-off and then enabled  (see Fig.~\ref{fig:map}). A more quantitative study of the coding is shown by comparing selection distribution of sparse coefficients when the homeostasis mechanism is turned on (see Fig.~\ref{fig:quant}). We demonstrate that forcing the learning activity to be uniformly spread among all receptive fields results in a faster convergence of the representation error, and in an increase of the Shanon entropy. Finally, an interesting perspective is to apply the homeostatic regulation algorithm in a classical fully connected deep-learning neural network and applied on the MNIST recognition task. By using the sparse coefficients as the input layer of the network, we can compare the performance obtained with and without the homeostatic mechanism. Preliminary results show that the improvement in efficiency is more acute when using sparse representations (5 out of 324 coefficients).
-}%
+\newcommand{\ParagCompAcqu}{
+Methodologie (python, notamment OOP; utilisation et maintien d'un logbook; utilisation de git; communications à distance via les protocoles ssh, approfondissement des connaissances en \LaTeX)\\
+Méthodes de traitement d'images et de vidéos\\
+Compétences d'ingénierie et de reverse-engineering.\\
+Connaissances neuroscientifiques dans les domaines de la perception et du traitement de l'information visuelle.
+}
 
 %##################################################################################################################################
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[8pt, landscape,\Draft]{sciposter}
 %\usepackage[dvipsnames]{x}
-%\usepackage{amsmath}
-%\usepackage{amssymb}
 \usepackage{multicol}
 \usepackage{xcolor}
-%\documentclass[a4paper, 11pt]{article} % For LaTeX2e
 %\usepackage{times}
 \usepackage[utf8]{luainputenc}
 %============ common ===================
-\usepackage[english]{babel}%
+\usepackage[francais]{babel}%
 %\usepackage{csquotes}%
 \usepackage[autostyle]{csquotes}
 %% Sans-serif Arial-like fonts
 \renewcommand{\rmdefault}{phv} 
 \renewcommand{\sfdefault}{phv} 
      \usepackage{textcomp}
-     \usepackage{libertine}%[sb]
+     \usepackage{libertine}
      \usepackage[varqu,varl]{inconsolata}% sans serif typewriter
      \usepackage[libertine,bigdelims,vvarbb]{newtxmath} % bb from STIX
      \usepackage[cal=boondoxo]{mathalfa} % mathcal
@@ -152,18 +137,17 @@ We compared qualitatively the set $\dico$ of receptive filters generated by the 
        supscaled=1.2,%
        raised=-.13em]{superiors}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{hyperref}       % hyperlinks
 \usepackage[unicode,linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,pdfborder={0 0 0}]{hyperref}%
 \hypersetup{%
 pdftitle={\Title},%
-pdfauthor={Corrresponding author: \AuthorB < \EmailB > \AddressB - \WebsiteB },%
+pdfauthor={Corresponding author: \AuthorB < \EmailB > \AddressB - \WebsiteB },%
 pdfkeywords={\Keywords}%
 }%
-\usepackage{url}            % simple URL typesetting
-\usepackage{booktabs}       % professional-quality tables
-\usepackage{amsfonts}       % blackboard math symbols
-\usepackage{nicefrac}       % compact symbols for 1/2, etc.
-\usepackage{microtype}      % microtypography
+%\usepackage{url}            % simple URL typesetting
+%\usepackage{booktabs}       % professional-quality tables
+%\usepackage{amsfonts}       % blackboard math symbols
+%\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+%\usepackage{microtype}      % microtypography
 
 \usepackage{tikz}%
 \if 1\Draft
@@ -175,50 +159,50 @@ pdfkeywords={\Keywords}%
 %\usepackage{amssymb}
 %\usepackage{amsthm}
 %\usepackage{amsfonts, amssymb, amscd}
-\newcommand{\norm}[1]{|\!| #1 |\!|}
-\newcommand{\dotp}[2]{\langle #1,\,#2\rangle}
-\newcommand{\eqdef}{\ensuremath{\stackrel{\mbox{\upshape\tiny def.}}{=}}}
-\newcommand{\eqset}{\ensuremath{\stackrel{\mbox{\upshape\tiny set}}{=}}}
-\newcommand{\eq}[1]{\begin{equation*}#1\end{equation*}}
-\newcommand{\eql}[1]{\begin{equation}#1\end{equation}}
-\newcommand{\pd}[2]{ \frac{ \partial #1}{\partial #2} }
-\newcommand{\NN}{\mathbb{N}}
-\newcommand{\RR}{\mathbb{R}}
-\newcommand{\CC}{\mathbb{C}}
+%\newcommand{\norm}[1]{|\!| #1 |\!|}
+%\newcommand{\dotp}[2]{\langle #1,\,#2\rangle}
+%\newcommand{\eqdef}{\ensuremath{\stackrel{\mbox{\upshape\tiny def.}}{=}}}
+%\newcommand{\eqset}{\ensuremath{\stackrel{\mbox{\upshape\tiny set}}{=}}}
+%\newcommand{\eq}[1]{\begin{equation*}#1\end{equation*}}
+%\newcommand{\eql}[1]{\begin{equation}#1\end{equation}}
+%\newcommand{\pd}[2]{ \frac{ \partial #1}{\partial #2} }
+%\newcommand{\NN}{\mathbb{N}}
+%\newcommand{\RR}{\mathbb{R}}
+%\newcommand{\CC}{\mathbb{C}}
 \usepackage{siunitx}
 %\renewcommand{\cite}{\citep}%
-\newcommand{\ms}{\si{\milli\second}}%
-\newcommand{\m}{\si{\meter}}%
-\newcommand{\s}{\si{\second}}%
-\usepackage[natbib=true,
-			style=ieee, %numeric-comp,
-      		sortcites=true,
-			abbreviate=true,
-			maxcitenames=2,
-			maxnames = 5,
+%\newcommand{\ms}{\si{\milli\second}}%
+%\newcommand{\m}{\si{\meter}}%
+%\newcommand{\s}{\si{\second}}%
+%\usepackage[natbib=true,
+%			style=ieee, %numeric-comp,
+%      		sortcites=true,
+%			abbreviate=true,
+%			maxcitenames=2,
+%			maxnames = 5,
 %			firstinits=true,
 %			uniquename=init,
 %			sorting=none,
-			doi=false,
-			url=true,
-			isbn=false,
-			eprint=false,
-			texencoding=utf8,
-			bibencoding=latin1,
+%			doi=false,
+%			url=true,
+%			isbn=false,
+%			eprint=false,
+%			texencoding=utf8,
+%			bibencoding=latin1,
 			%autocite=superscript,
-			backend=bibtex,
+%			backend=bibtex,
 			%articletitle=false,
-			]{biblatex}%
-\AtEveryBibitem{
-  \clearfield{month}
-  \clearfield{day}
-  \clearfield{url}
-  \clearfield{note}
-  \clearfield{comment}
+%			]{biblatex}%
+%\AtEveryBibitem{
+%  \clearfield{month}
+%  \clearfield{day}
+%  \clearfield{url}
+%  \clearfield{note}
+%  \clearfield{comment}
 %  \clearfield{edition}
 %  \clearfield{publisher}
-}
-\addbibresource{BoutinRuffierPerrinet17spars.bib}%
+%}
+%\addbibresource{BoutinRuffierPerrinet17spars.bib}%
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 %\graphicspath{{../2016-12-25_DropLets_ms/figures/}}% 
@@ -246,8 +230,8 @@ pdfkeywords={\Keywords}%
 \title{\Title}
 
 % The following commands can be used to alter the default logo settings
-\leftlogo[1.2]{PACA1-coul_RVB__03__01.jpg}%{  % defines logo to left of title (with scale factor)
-\rightlogo[1.]{amidex_logo_2}  % same but on right
+\leftlogo[1.2]{logo_amu_rvb.jpg}%{  % defines logo to left of title (with scale factor)
+\rightlogo[1.]{logoINT.jpg}  % same but on right
 
 % author names and affiliations
 % use a multiple column layout for up to three different
@@ -258,43 +242,33 @@ pdfkeywords={\Keywords}%
 }
 
 \institute{
-{\InstituteA }  --- % \\
+{\InstituteA }
 {\InstituteB }
 }           
 \begin{document}
-%\conference{ Presented Thursday, 18 May 2017 at {\bf NeuroFrance 2017}, the International Conference from the Soci\'et'e des Neurosciences, Bordeaux, France}
 \conference{\Conference}
-
-
-   
+ 
 % make the title area
 \maketitle
 %\vspace*{-.4cm}
 
-%\vspace*{-.7cm}
 \begin{multicols}{4}
 
-\begin{abstract}
-%\boldmath
-\Abstract
-\end{abstract}
-
 %%%% Introduction
-%\section{Introduction}
-%
-%\ParagIntro
-
-\section{Learning on natural images}
-\FigureMap
-
+\section{Motivations biologiques}
+\ParagMotivBio
 \columnbreak
-\section{Simulating a perturbation}
-\FigureQuant
 
+\section{Méthodes computationnelles}
+\ParagMethComp
 \columnbreak
-\section{Application to classification}
-\FigureMNIST
 
-% that's all folks
+\section{Améliorations apportées au projet}
+\ParagAmelio
+\columnbreak
+
+\section{Compétences acquises}
+\ParagCompAcqu
+
 \end{multicols}
 \end{document}

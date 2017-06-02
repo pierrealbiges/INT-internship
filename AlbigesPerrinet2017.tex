@@ -56,6 +56,19 @@
 \end{figure}
 }
 
+\newcommand{\FigureNetworkPic}{
+\begin{tikzpicture}[
+squarednode/.style={rectangle, draw=black!60, fill=gray!5, very thick, minimum size=40mm}
+]
+\node[squarednode] (JUPYTER) {JUPYTER};
+\node[squarednode] (GIT) [right=of JUPYTER] {GIT};
+
+\draw[->] (JUPYTER.est) -- (GIT.west);
+\draw[->] (GIT.west) -- (JUPYTER.est);
+\end{tikzpicture}
+}
+
+
 \newcommand{\FigureMNIST}{
 \begin{figure}[!ht]
 \centering{
@@ -79,9 +92,11 @@
 %                    SECTIONS
 % --------------------------------------------------------------------------
 
-\newcommand{\ParagMotivBio}{
+\newcommand{\ParagMotiv}{
 Qu'est-ce que le biomimétisme?\\
-Reproduire les fonctions et les capacités du vivant dans ses systèmes artificiels afin d'améliorer leurs performances.
+Reproduire les fonctions et les capacités du vivant dans ses systèmes artificiels afin d'améliorer leurs performances (en résolution et en vitesse de traitement).\\
+
+Ingénierie "low-tech" pour l'intégration du programme dans des appareils possédant une faible puissance de calcul, tels que des drones, des systèmes robotisés autonomes ou des rétines artifielles.
 }
 
 \newcommand{\ParagMethComp}{
@@ -102,6 +117,8 @@ Architecture en couches
 
 \newcommand{\ParagCompAcqu}{
 Methodologie (python, notamment OOP; utilisation et maintien d'un logbook; utilisation de git; communications à distance via les protocoles ssh, approfondissement des connaissances en \LaTeX)\\
+\FigureNetworkPic
+\\
 Méthodes de traitement d'images et de vidéos\\
 Compétences d'ingénierie et de reverse-engineering.\\
 Connaissances neuroscientifiques dans les domaines de la perception et du traitement de l'information visuelle.
@@ -144,7 +161,8 @@ pdfkeywords={\Keywords}%
 %\usepackage{nicefrac}       % compact symbols for 1/2, etc.
 %\usepackage{microtype}      % microtypography
 
-\usepackage{tikz}%
+\usepackage{tikz}
+\usetikzlibrary{positioning}
 \if 1\Draft
 \usepackage{setspace}
 \fi
@@ -250,8 +268,8 @@ pdfkeywords={\Keywords}%
 \begin{multicols*}{4}
 
 %%%% Introduction
-\section{Motivations biologiques}
-\ParagMotivBio
+\section{Motivations du projet}
+\ParagMotiv
 \columnbreak
 
 \section{Méthodes computationnelles}

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016/Debian)  (format=lualatex 2017.5.30)  2 JUN 2017 16:11
+This is LuaTeX, Version 0.95.0 (TeX Live 2016/Debian)  (format=lualatex 2017.5.30)  2 JUN 2017 17:17
  restricted system commands enabled.
 **AlbigesPerrinet2017.tex
 (./AlbigesPerrinet2017.tex
@@ -659,7 +659,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.185 seconds)
+luaotfload | main : initialization completed in 0.144 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -2047,6 +2047,10 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2016/03/01 v2.6q A comprehensive (SI) units package
 
@@ -2230,66 +2234,66 @@ Package csquotes Info: ... found 'babel' package.
  (./AlbigesPerrinet2017.aux)
 \openout1 = AlbigesPerrinet2017.aux
 
-LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 243.
-LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 243
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 261.
+LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 261
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 243.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 243.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 261.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 261.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 243.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 243.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 261.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 261.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for EU2/lmr/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 243.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 243.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for EU2/lmr/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 261.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 261.
 
 (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 243.
-LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 243
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 261.
+LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 261
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 243.
-LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 24
-3.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 261.
+LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 26
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 243.
-LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -2322,11 +2326,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 -- Paper type set to a0.
 
-Package xcolor Warning: Incompatible color definition on input line 243.
+Package xcolor Warning: Incompatible color definition on input line 261.
 
 \GPT@outputbox=\box92
-LaTeX Info: Redefining \dots on input line 243.
-LaTeX Info: Redefining \up on input line 243.
+LaTeX Info: Redefining \dots on input line 261.
+LaTeX Info: Redefining \up on input line 261.
 Inserting `frenchb.french_punctuation' at position 1 in `kerning'.
 .................................................
 . fontspec info: "setup-math"
@@ -2335,72 +2339,72 @@ Inserting `frenchb.french_punctuation' at position 1 in `kerning'.
 .................................................
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 243.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 243.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 243.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 243.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 243.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 243.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 243.
-LaTeX Font Info:    Redeclaring math accent \check on input line 243.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 243.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 243.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 243.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 243.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 243.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 261.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 261.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 261.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 261.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 261.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 261.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 261.
+LaTeX Font Info:    Redeclaring math accent \check on input line 261.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 261.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 261.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 261.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 261.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 261.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU2' for symbol font
-(Font)              `operators' in the math version `normal' on input line 243.
+(Font)              `operators' in the math version `normal' on input line 261.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/LinLibertine(0)/m/n --> EU2/LinLibertine(0)/m/n on i
-nput line 243.
+nput line 261.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU2' for symbol font
-(Font)              `operators' in the math version `bold' on input line 243.
+(Font)              `operators' in the math version `bold' on input line 261.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/LinLibertine(0)/sb/n --> EU2/LinLibertine(0)/m/n on 
-input line 243.
+input line 261.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  EU2/LinLibertine(0)/m/n --> EU2/LinLibertine(0)/m/n on i
-nput line 243.
+nput line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/LinLibertine(0)/m/it --> EU2/LinLibertine(0)/m/it on
- input line 243.
+ input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/LinLibertine(0)/sb/n --> EU2/LinLibertine(0)/bx/n on
- input line 243.
+ input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  EU2/LinBiolinum(0)/m/n --> EU2/LinBiolinum(0)/m/n on inp
-ut line 243.
+ut line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  EU2/zi4/m/n --> EU2/zi4/m/n on input line 243.
+(Font)                  EU2/zi4/m/n --> EU2/zi4/m/n on input line 261.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  EU2/LinLibertine(0)/m/n --> EU2/LinLibertine(0)/bx/n on 
-input line 243.
+input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/LinLibertine(0)/sb/it --> EU2/LinLibertine(0)/bx/it 
-on input line 243.
+on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  EU2/LinBiolinum(0)/b/n --> EU2/LinBiolinum(0)/bx/n on in
-put line 243.
+put line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  EU2/zi4/b/n --> EU2/zi4/bx/n on input line 243.
+(Font)                  EU2/zi4/b/n --> EU2/zi4/bx/n on input line 261.
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 im
 )
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box93
-Package hyperref Info: Link coloring OFF on input line 243.
+Package hyperref Info: Link coloring OFF on input line 261.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2410,9 +2414,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count293
 )
-LaTeX Info: Redefining \ref on input line 243.
-LaTeX Info: Redefining \pageref on input line 243.
-LaTeX Info: Redefining \nameref on input line 243.
+LaTeX Info: Redefining \ref on input line 261.
+LaTeX Info: Redefining \pageref on input line 261.
+LaTeX Info: Redefining \nameref on input line 261.
 
 (./AlbigesPerrinet2017.out) (./AlbigesPerrinet2017.out)
 \@outlinefile=\write4
@@ -2427,19 +2431,19 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
 )
 \c__siunitx_mathsf_int=\count294
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 243.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 261.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 243.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 261.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 243.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 261.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd
@@ -2447,22 +2451,22 @@ File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.2> not available
-(Font)              size <17.28> substituted on input line 243.
+(Font)              size <17.28> substituted on input line 261.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13.7> not available
-(Font)              size <14.4> substituted on input line 243.
+(Font)              size <14.4> substituted on input line 261.
 
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 18.2pt on input line 243.
+(Font)              scaled to size 18.2pt on input line 261.
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 13.7pt on input line 243.
+(Font)              scaled to size 13.7pt on input line 261.
 \c__siunitx_mathtt_int=\count295
-LaTeX Font Info:    Try loading font information for EU2+zi4 on input line 243.
-LaTeX Font Info:    No file EU2zi4.fd. on input line 243.
+LaTeX Font Info:    Try loading font information for EU2+zi4 on input line 261.
+LaTeX Font Info:    No file EU2zi4.fd. on input line 261.
 
 LaTeX Font Warning: Font shape `EU2/zi4/m/n' undefined
-(Font)              using `EU2/lmr/m/n' instead on input line 243.
+(Font)              using `EU2/lmr/m/n' instead on input line 261.
 
 (compiling luc: /var/lib/texmf/luatex-cache/generic/fonts/otl/lmroman12-regular.
 luc)(load luc: /home/albert/.texlive2016/texmf-var/luatex-cache/generic/fonts/ot
@@ -2470,129 +2474,159 @@ l/lmroman12-regular.luc) <logo_amu_rvb.jpg, id=7, 615.7404pt x 211.5102pt>
 File: logo_amu_rvb.jpg Graphic file (type jpg)
 
 <use logo_amu_rvb.jpg>
-Package luatex.def Info: logo_amu_rvb.jpg used on input line 249.
+Package luatex.def Info: logo_amu_rvb.jpg used on input line 267.
 (luatex.def)             Requested size: 615.73889pt x 211.50967pt.
 
-Overfull \hbox (50.45306pt too wide) in paragraph at lines 249--249
+Overfull \hbox (50.45306pt too wide) in paragraph at lines 267--267
  [] 
  []
 
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 61.92pt on input line 249.
+(Font)              scaled to size 61.92pt on input line 267.
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 61.92pt on input line 249.
+(Font)              scaled to size 61.92pt on input line 267.
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 43.0pt on input line 249.
+(Font)              scaled to size 43.0pt on input line 267.
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 43.0pt on input line 249.
+(Font)              scaled to size 43.0pt on input line 267.
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 35.83pt on input line 249.
+(Font)              scaled to size 35.83pt on input line 267.
 <logoINT.jpg, id=8, 153.6942pt x 94.4328pt>
 File: logoINT.jpg Graphic file (type jpg)
  <use logoINT.jpg>
-Package luatex.def Info: logoINT.jpg used on input line 249.
+Package luatex.def Info: logoINT.jpg used on input line 267.
 (luatex.def)             Requested size: 153.6938pt x 94.43256pt.
 
-Overfull \hbox (8.29333pt too wide) in paragraph at lines 249--249
+Overfull \hbox (8.29333pt too wide) in paragraph at lines 267--267
 []$[]$  $[]$$[]$
  []
 
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 24.88pt on input line 253.
+(Font)              scaled to size 24.88pt on input line 271.
 
-Package xcolor Warning: Incompatible color definition on input line 253.
-
-
-Package xcolor Warning: Incompatible color definition on input line 253.
+Package xcolor Warning: Incompatible color definition on input line 271.
 
 
-Package xcolor Warning: Incompatible color definition on input line 253.
+Package xcolor Warning: Incompatible color definition on input line 271.
 
 
-Package xcolor Warning: Incompatible color definition on input line 253.
+Package xcolor Warning: Incompatible color definition on input line 271.
 
 
-Package xcolor Warning: Incompatible color definition on input line 257.
+Package xcolor Warning: Incompatible color definition on input line 271.
 
 
-Package xcolor Warning: Incompatible color definition on input line 257.
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+
+ []
 
 
-Package xcolor Warning: Incompatible color definition on input line 257.
+Package xcolor Warning: Incompatible color definition on input line 275.
 
 
-Package xcolor Warning: Incompatible color definition on input line 257.
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
 
 <unproc_fig.png, id=9, 433.62pt x 289.08pt>
 File: unproc_fig.png Graphic file (type png)
  <use unproc_fig.png>
-Package luatex.def Info: unproc_fig.png used on input line 258.
+Package luatex.def Info: unproc_fig.png used on input line 276.
 (luatex.def)             Requested size: 570.2633pt x 380.22377pt.
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/m/sc' will be
-(Font)              scaled to size 24.88pt on input line 258.
+(Font)              scaled to size 24.88pt on input line 276.
 
 <proc_fig.png, id=10, 433.62pt x 289.08pt>
 File: proc_fig.png Graphic file (type png)
  <use proc_fig.png>
-Package luatex.def Info: proc_fig.png used on input line 258.
+Package luatex.def Info: proc_fig.png used on input line 276.
 (luatex.def)             Requested size: 712.82643pt x 475.2764pt.
 
-Overfull \hbox (16.63617pt too wide) in paragraph at lines 258--260
+Overfull \hbox (16.63617pt too wide) in paragraph at lines 276--278
 []    $[]$
  []
 
 
-Overfull \hbox (16.63617pt too wide) in paragraph at lines 258--260
+Overfull \hbox (16.63617pt too wide) in paragraph at lines 276--278
 []    $[]$
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 261.
+Package xcolor Warning: Incompatible color definition on input line 279.
 
 
-Package xcolor Warning: Incompatible color definition on input line 261.
+Package xcolor Warning: Incompatible color definition on input line 279.
 
 
-Package xcolor Warning: Incompatible color definition on input line 261.
+Package xcolor Warning: Incompatible color definition on input line 279.
 
 
-Package xcolor Warning: Incompatible color definition on input line 261.
+Package xcolor Warning: Incompatible color definition on input line 279.
 
 <benchmark_fig.png, id=11, 578.16pt x 361.35pt>
 File: benchmark_fig.png Graphic file (type png)
  <use benchmark_fig.png>
-Package luatex.def Info: benchmark_fig.png used on input line 262.
+Package luatex.def Info: benchmark_fig.png used on input line 280.
 (luatex.def)             Requested size: 712.82643pt x 445.53856pt.
 
-Overfull \hbox (16.58667pt too wide) in paragraph at lines 262--264
+Overfull \hbox (16.58667pt too wide) in paragraph at lines 280--282
 []    $[]$
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 265.
+Package xcolor Warning: Incompatible color definition on input line 283.
 
 
-Package xcolor Warning: Incompatible color definition on input line 265.
+Package xcolor Warning: Incompatible color definition on input line 283.
 
 
-Package xcolor Warning: Incompatible color definition on input line 265.
+Package xcolor Warning: Incompatible color definition on input line 283.
 
 
-Package xcolor Warning: Incompatible color definition on input line 265.
+Package xcolor Warning: Incompatible color definition on input line 283.
+
+
+! Package PGF Math Error: Unknown function `est' (in 'est').
+
+See the PGF Math package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.284 \ParagCompAcqu
+                  
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+! Package PGF Math Error: Unknown function `est' (in 'est').
+
+See the PGF Math package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.284 \ParagCompAcqu
+                  
+(That was another \errmessage.)
 
 LaTeX Font Info:    Font shape `EU2/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 268.
+(Font)              scaled to size 17.28pt on input line 286.
 [1
 
 
 Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./lo
 go_amu_rvb.jpg><./logoINT.jpg><./unproc_fig.png><./proc_fig.png><./benchmark_fig
 .png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 287.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 287.
  (./AlbigesPerrinet2017.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 287.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
 Package rerunfilecheck Info: File `AlbigesPerrinet2017.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -2606,20 +2640,20 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 49125 strings out of 495118
+ 49231 strings out of 495118
  100000,953878 words of node,token memory allocated
- 1446 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 72 glue, 1 kern, 1 penalty, 162 attribute, 71 glue_
-spec, 41 attribute_list, 1 write nodes
-   avail lists: 1:2,2:1368,3:152,4:66,5:124,6:1696,7:598,8:46,9:210,10:19,11:186
+ 1436 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 72 glue, 1 kern, 1 penalty, 158 attribute, 71 glue_
+spec, 40 attribute_list, 1 write nodes
+   avail lists: 1:2,2:1818,3:219,4:66,5:139,6:1940,7:686,8:46,9:232,10:19,11:216
 ,12:1
- 50591 multiletter control sequences out of 65536+600000
- 157 fonts using 18583215 bytes
+ 50690 multiletter control sequences out of 65536+600000
+ 157 fonts using 18583231 bytes
  54i,7n,69p,837b,972s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/fonts/opentype/linux-libertine/LinBiolinum_R.otf></usr/share/fonts/o
 pentype/linux-libertine/LinBiolinum_R.otf></usr/share/fonts/opentype/linux-liber
 tine/LinBiolinum_RB.otf>
-Output written on AlbigesPerrinet2017.pdf (1 page, 2327919 bytes).
+Output written on AlbigesPerrinet2017.pdf (1 page, 2328682 bytes).
 
 PDF statistics: 52 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream

@@ -34,32 +34,17 @@
 % --------------------------------------------------------------------------
 
 \newcommand{\FigureUnprocPic}{
-\begin{figure}
-\centering{
-\begin{tikzpicture}
-\draw [anchor=north west] (0, .9\linewidth) node {\includegraphics[width=.8\linewidth]{unproc_fig.png}};
-%\draw (0, .9\linewidth) node [above right=0mm] {$\mathsf{A}$};
-\end{tikzpicture}}
-\caption{
-(...)
-\label{fig:map}}
+\begin{figure}[!h]
+\centering{\includegraphics[width=.8\linewidth]{unproc_fig.png}}
+\caption{(...)\label{fig:UnprocPic}}
 \end{figure}
 }
 
-\newcommand{\FigureQuant}{
-\begin{figure}[!ht]
-\centering{
-\begin{tikzpicture}
-\draw [anchor=north west] (0, .8\linewidth) node {\includegraphics[width=\linewidth]{PDF_nohomeo}};
-\draw [anchor=north west] (0, .4\linewidth) node {\includegraphics[width=\linewidth]{z_score}};
-\draw [anchor=north west] (0, .0) node {\includegraphics[width=\linewidth]{PDF_homeo}};
-\draw (0, .7\linewidth) node [above right=0mm] {$\mathsf{A}$};
-\draw (0, .3\linewidth) node [above right=0mm] {$\mathsf{B}$};
-\draw (0, -.1\linewidth) node [above right=0mm] {$\mathsf{C}$};
-\end{tikzpicture}}
-\caption{
-(...)
-\label{fig:quant}}
+\newcommand{\FigureProcPic}{
+\begin{figure}[!h]
+\centering{\includegraphics[width=\linewidth]{proc_fig.png}}
+%\draw (0, .7\linewidth) node [above right=0mm] {$\mathsf{A}$};
+\caption{(...)\label{fig:ProcPic}}
 \end{figure}
 }
 
@@ -87,16 +72,17 @@
 % --------------------------------------------------------------------------
 
 \newcommand{\ParagMotivBio}{
-Biomimétisme?\\
+Qu'est-ce que le biomimétisme?\\
 Reproduire les fonctions et les capacités du vivant dans ses systèmes artificiels afin d'améliorer leurs performances.
 }
 
 \newcommand{\ParagMethComp}{
-grab (picam, cam ou video)\\
+Grab: récupérer une image ou une vidéo à partir d'un fichier video, d'une caméra locale ou d'une caméra distante (connectée à une RaspBerry Pi).\\
 \FigureUnprocPic
-process (réduire la quantité d'informations transmises afin d'accélerer la temporalité de la perception)\\
-networking\\
-displaying
+Process: réaliser un traitement sur chaque frame que comporte l'image, afin de réduire la quantité d'informations transmises et d'accélerer la temporalité de la perception.\\
+Networking: Transmettre les informations (requêtes ou données) entre les acteurs.\\
+Displaying: afficher l'image nouvellement traitée afin de contrôler les résultats.\\
+\FigureProcPic
 }
 
 \newcommand{\ParagAmelio}{
@@ -252,7 +238,7 @@ pdfkeywords={\Keywords}%
 \maketitle
 %\vspace*{-.4cm}
 
-\begin{multicols}{4}
+\begin{multicols*}{4}
 
 %%%% Introduction
 \section{Motivations biologiques}
@@ -270,5 +256,5 @@ pdfkeywords={\Keywords}%
 \section{Compétences acquises}
 \ParagCompAcqu
 
-\end{multicols}
+\end{multicols*}
 \end{document}

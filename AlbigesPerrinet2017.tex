@@ -43,31 +43,32 @@
 \newcommand{\FigureProcPic}{
 \begin{figure}[!h]
 \centering{\includegraphics[width=\linewidth]{proc_fig.png}}
-%\draw (0, .7\linewidth) node [above right=0mm] {$\mathsf{A}$};
-\caption{(...)\label{fig:ProcPic}}
 \end{figure}
 }
 
-\newcommand{\FigureBenchPic}{
+\newcommand{\FigureBench}{
 \begin{figure}[!h]
 \centering{\includegraphics[width=\linewidth]{benchmark_fig.png}}
-%\draw (0, .7\linewidth) node [above right=0mm] {$\mathsf{A}$};
-\caption{(...)\label{fig:BenchPic}}
 \end{figure}
 }
 
-\newcommand{\FigureNetworkPic}{
-\begin{tikzpicture}[
-squarednode/.style={rectangle, draw=black!60, fill=gray!5, very thick, minimum size=40mm}
-]
-\node[squarednode] (JUPYTER) {JUPYTER};
-\node[squarednode] (GIT) [right=of JUPYTER] {GIT};
-
-\draw[->] (JUPYTER.est) -- (GIT.west);
-\draw[->] (GIT.west) -- (JUPYTER.est);
-\end{tikzpicture}
+\newcommand{\FigureBiomimetism}{
+\begin{figure}[!h]
+\centering{\includegraphics[width=\linewidth]{biomimetism.pdf}}
+\end{figure}
 }
 
+\newcommand{\FigureLayered}{
+\begin{figure}[!h]
+\centering{\includegraphics[width=\linewidth]{layered.pdf}}
+\end{figure}
+}
+
+\newcommand{\FigureNetwork}{
+\begin{figure}[!h]
+\centering{\includegraphics[width=\linewidth]{Python_git.pdf}}
+\end{figure}
+}
 
 \newcommand{\FigureMNIST}{
 \begin{figure}[!ht]
@@ -97,6 +98,7 @@ Qu'est-ce que le biomimétisme?\\
 Reproduire les fonctions et les capacités du vivant dans ses systèmes artificiels afin d'améliorer leurs performances (en résolution et en vitesse de traitement).\\
 
 Ingénierie "low-tech" pour l'intégration du programme dans des appareils possédant une faible puissance de calcul, tels que des drones, des systèmes robotisés autonomes ou des rétines artifielles.
+\FigureBiomimetism
 }
 
 \newcommand{\ParagMethComp}{
@@ -111,13 +113,14 @@ Displaying: afficher l'image nouvellement traitée afin de contrôler les résul
 \newcommand{\ParagAmelio}{
 Travailler avec des videos pour réaliser des traitements hors-ligne\\
 Réaliser un "benchmark" pour contrôler l'influence de certains paramètres\\
-\FigureBenchPic
-Architecture en couches
+\FigureBench
+Architecture en couches\\
+\FigureLayered
 }
 
 \newcommand{\ParagCompAcqu}{
 Methodologie (python, notamment OOP; utilisation et maintien d'un logbook; utilisation de git; communications à distance via les protocoles ssh, approfondissement des connaissances en \LaTeX)\\
-\FigureNetworkPic
+\FigureNetwork
 \\
 Méthodes de traitement d'images et de vidéos\\
 Compétences d'ingénierie et de reverse-engineering.\\

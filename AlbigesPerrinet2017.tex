@@ -35,7 +35,6 @@
 \newcommand{\FigureUnprocPic}{
 \begin{figure}[!h]
 \centering{\includegraphics[width=\linewidth]{unproc_fig.png}}
-\caption{(...)\label{fig:UnprocPic}}
 \end{figure}
 }
 
@@ -93,19 +92,29 @@
 % --------------------------------------------------------------------------
 
 \newcommand{\ParagMotiv}{
+\subsection*{Biomimétisme}
 Qu'est-ce que le biomimétisme?\\
 Reproduire les fonctions et les capacités du vivant dans ses systèmes artificiels afin d'améliorer leurs performances (en résolution et en vitesse de traitement).\\
-\FigureBiomimetism
+\FigureBiomimetism\\
+
+\subsection*{Low-Tech}
 Ingénierie "low-tech" pour l'intégration du programme dans des appareils possédant une faible puissance de calcul, tels que des drones, des systèmes robotisés autonomes ou des rétines artifielles.\\
 
 }
 
 \newcommand{\ParagMethComp}{
-Grab: récupérer une image ou une vidéo à partir d'un fichier video, d'une caméra locale ou d'une caméra distante (connectée à une RaspBerry Pi).\\
-\FigureUnprocPic
-Process: réaliser un traitement sur chaque frame que comporte l'image, afin de réduire la quantité d'informations transmises et d'accélerer la temporalité de la perception.\\
-Networking: Transmettre les informations (requêtes ou données) entre les acteurs.\\
-Displaying: afficher l'image nouvellement traitée afin de contrôler les résultats.\\
+\subsection*{Grab}
+Récupérer une image ou une vidéo à partir d'un fichier video, d'une caméra locale ou d'une caméra distante (connectée à une RaspBerry Pi).\\
+\FigureUnprocPic\\
+
+\subsection*{Process}
+Réaliser un traitement sur chaque frame que comporte l'image, afin de réduire la quantité d'informations transmises et d'accélerer la temporalité de la perception.\\
+
+\subsection*{Network}
+Transmettre les informations (requêtes ou données) entre les acteurs.\\
+
+\subsection*{Display}
+Afficher l'image nouvellement traitée afin de contrôler les résultats.\\
 \FigureProcPic
 }
 
@@ -128,7 +137,7 @@ Connaissances neuroscientifiques dans les domaines de la perception et du traite
 
 %##################################################################################################################################
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[30pt, portrait, a0, ruledsections,\Draft]{sciposter}
+\documentclass[30pt, portrait, a0, plainsections,\Draft]{sciposter}
 %\usepackage[dvipsnames]{x}
 \usepackage{multicol}
 \usepackage{xcolor}
@@ -218,19 +227,22 @@ pdfkeywords={\Keywords}%
 
 \begin{multicols}{3}
 
-%%%% Introduction\\
-\section{Motivations du projet}
+\section*{Motivations du projet}
+\rule[40ex]{\linewidth}{1pt}\\
 \ParagMotiv
-\columnbreak
+%\columnbreak
 
-\section{Méthodes computationnelles}
+\section*{Méthodes computationnelles}
+\rule[40ex]{\linewidth}{1pt}\\
 \ParagMethComp
 \columnbreak
 
-\section{Améliorations apportées au projet}
+\section*{Améliorations apportées au projet}
+\rule[40ex]{\linewidth}{1pt}\\
 \ParagAmelio
 
-\section{Compétences acquises}
+\section*{Compétences acquises}
+\rule[40ex]{\linewidth}{1pt}\\
 \ParagCompAcqu
 
 \end{multicols}

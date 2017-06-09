@@ -13,6 +13,6 @@ phrs = eventRetina(model=dict(layer='GCs', # label for this layer
                              in_port=5555,
                              output=['stream'], # output: can be stream, display, ...
                              out_port=5556
-                             ))
+                             ), verb=True)
 print
 phrs.run()

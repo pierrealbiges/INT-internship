@@ -161,7 +161,7 @@ Afficher l'image nouvellement traitée afin de contrôler les résultats.\\
 }
 
 %##################################################################################################################################
-\documentclass[30pt, portrait, a0, plainsections,\Draft]{sciposter}
+\documentclass[14pt, portrait, a0, plainsections, \Draft]{sciposter}
 %\usepackage[dvipsnames]{x}
 \usepackage{multicol}
 \usepackage{xcolor}
@@ -211,11 +211,11 @@ pdfkeywords={\Keywords}%
 \newcounter{myfigure}
 \setcounter{myfigure}{1}
 \renewcommand{\caption}[1]{
-  \vspace{0.5cm}
+  \vspace{0.25cm}
   \begin{quote}
     {{\sc Figure} \arabic{myfigure}: #1}
   \end{quote}
-  \vspace{1cm}
+  \vspace{.5cm}
   \stepcounter{myfigure}
 }%
 %
@@ -255,6 +255,7 @@ pdfkeywords={\Keywords}%
 \section*{Motivations du projet}
 \rule[40ex]{\linewidth}{3pt}\\
 \ParagMotiv
+\vfill
 \columnbreak
 
 \section*{Méthodes computationnelles}

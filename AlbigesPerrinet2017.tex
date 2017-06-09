@@ -46,7 +46,7 @@
 
 \newcommand{\FigureBench}{
 \begin{figure}[!h]
-\centering{\includegraphics[width=\linewidth]{benchmark_fig.png}}
+\centering{\includegraphics[width=0.7\linewidth]{benchmark_fig.png}}
 \end{figure}
 }
 
@@ -64,7 +64,7 @@
 
 \newcommand{\FigureNetwork}{
 \begin{figure}[!h]
-\centering{\includegraphics[width=\linewidth]{Python_git.pdf}}
+\includegraphics[width=0.7\linewidth]{Python_git.pdf}
 \end{figure}
 }
 
@@ -93,50 +93,74 @@
 
 \newcommand{\ParagMotiv}{
 \subsection*{Biomimétisme}
-Qu'est-ce que le biomimétisme?\\
-Reproduire les fonctions et les capacités du vivant dans ses systèmes artificiels afin d'améliorer leurs performances (en résolution et en vitesse de traitement).\\
-\FigureBiomimetism\\
+\rule[40ex]{10cm}{1pt}\\
+Qu'est-ce que la biomimétique?\\
+La biomimétique consiste en la reproduction de fonctions et de capacités des systèmes biologiques dans des systèmes artificiels afin d'améliorer leurs performances.\\
+L'objectif est donc de s'inspirer de ce que la sélection naturelle a permis d'obtenir au cours de l'évolution pour résoudre des problèmes d'ingénierie limitant les systèmes artificiels actuels : résistance et adaptabilité aux contraintes environnementales, collecte et utilisation de l'énergie dans l'environnement, autonomie dans les déplacements et les prises de décisions, ...\\
+
+L'ingénierie biomimétique est donc souvent utilisé dans le développement de technologies de pointe comme la robotique, mais aussi dans la recherche car il permet de mieux comprendre les mécanismes biologiques étudies.\\
+
+Dans le cadre de ce projet, c'est la rétine et le système visuel animal qui servent de modèle.\\
+\FigureBiomimetism
 
 \subsection*{Low-Tech}
-Ingénierie "low-tech" pour l'intégration du programme dans des appareils possédant une faible puissance de calcul, tels que des drones, des systèmes robotisés autonomes ou des rétines artifielles.\\
+\rule[40ex]{10cm}{1pt}\\
+L'une des limites actuelles de l'ingénierie touche à la puissance de calcul des systèmes utilisés.\\
 
+L'ingenerie "high-tech" cherche à créer les systèmes les plus performants possibles sans se soucier de la consommation d'énergie et de puissance de calcul.\\
+En réponse, l'ingénierie "low-tech" se concentre sur l'intégration de programmes dans des systèmes artificiels possédant une faible puissance de calcul ou une autonomie énergétique limitée, tels que les systèmes embarqués (drones, systèmes robotisés autonomes) ou répondant à des contraintes bien précises, tels que les rétines artifielles.\\
+
+Dans le cadre de OpenRetina, c'est une ingénerie low-tech et Open Source qui est visée, afin de permettre son adaptation et son utilisation par le plus de systèmes possible.
 }
 
 \newcommand{\ParagMethComp}{
+Le projet OpenRetina est composé d'un ensemble de programmes majoritairement écrits dans le language de programmation Python.\\
+Ces scripts réalisent une série de taches qu'on peut décrire en 4 catégories, ci-dessous :\\
+
 \subsection*{Grab}
+\rule[40ex]{10cm}{1pt}\\
 Récupérer une image ou une vidéo à partir d'un fichier video, d'une caméra locale ou d'une caméra distante (connectée à une RaspBerry Pi).\\
+Cette étape est proche d'une prise d'image classique mais sert surtout à récupérer les informations enregistrées individuellement dans chaque pixel.\\
 \FigureUnprocPic\\
 
 \subsection*{Process}
+\rule[40ex]{10cm}{1pt}\\
 Réaliser un traitement sur chaque frame que comporte l'image, afin de réduire la quantité d'informations transmises et d'accélerer la temporalité de la perception.\\
 
 \subsection*{Network}
+\rule[40ex]{10cm}{1pt}\\
 Transmettre les informations (requêtes ou données) entre les acteurs.\\
 
 \subsection*{Display}
+\rule[40ex]{10cm}{1pt}\\
 Afficher l'image nouvellement traitée afin de contrôler les résultats.\\
 \FigureProcPic
 }
 
 \newcommand{\ParagAmelio}{
-Travailler avec des videos pour réaliser des traitements hors-ligne\\
-Réaliser un "benchmark" pour contrôler l'influence de certains paramètres\\
+\begin{itemize}
+\item Travailler avec des videos pour réaliser des traitements hors-ligne\\
+\item Réaliser un "benchmark" pour contrôler l'influence de certains paramètres\\
+\end{itemize}
 \FigureBench
-Architecture en couches\\
+\begin{itemize}
+\item Architecture en couches\\
+\end{itemize}
 \FigureLayered
 }
 
 \newcommand{\ParagCompAcqu}{
-Methodologie (python, notamment OOP; utilisation et maintien d'un logbook; utilisation de git; communications à distance via les protocoles ssh, approfondissement des connaissances en \LaTeX)\\
+\begin{itemize}
+\item Methodologie (python, notamment OOP; utilisation et maintien d'un logbook; utilisation de git; communications à distance via les protocoles ssh, approfondissement des connaissances en \LaTeX)\\
 \FigureNetwork
 \\
-Méthodes de traitement d'images et de vidéos\\
-Compétences d'ingénierie et de reverse-engineering.\\
-Connaissances neuroscientifiques dans les domaines de la perception et du traitement de l'information visuelle.
+\item Méthodes de traitement d'images et de vidéos\\
+\item Compétences d'ingénierie et de reverse-engineering.\\
+\item Connaissances neuroscientifiques dans les domaines de la perception et du traitement de l'information visuelle.
+\end{itemize}
 }
 
 %##################################################################################################################################
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[30pt, portrait, a0, plainsections,\Draft]{sciposter}
 %\usepackage[dvipsnames]{x}
 \usepackage{multicol}
@@ -179,6 +203,7 @@ pdfkeywords={\Keywords}%
 \usepackage{siunitx}
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\renewcommand{\labelitemi}{∙}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                mycaption                     %%%
@@ -228,21 +253,21 @@ pdfkeywords={\Keywords}%
 \begin{multicols}{3}
 
 \section*{Motivations du projet}
-\rule[40ex]{\linewidth}{1pt}\\
+\rule[40ex]{\linewidth}{3pt}\\
 \ParagMotiv
-%\columnbreak
+\columnbreak
 
 \section*{Méthodes computationnelles}
-\rule[40ex]{\linewidth}{1pt}\\
+\rule[40ex]{\linewidth}{3pt}\\
 \ParagMethComp
 \columnbreak
 
 \section*{Améliorations apportées au projet}
-\rule[40ex]{\linewidth}{1pt}\\
+\rule[40ex]{\linewidth}{3pt}\\
 \ParagAmelio
 
 \section*{Compétences acquises}
-\rule[40ex]{\linewidth}{1pt}\\
+\rule[40ex]{\linewidth}{3pt}\\
 \ParagCompAcqu
 
 \end{multicols}

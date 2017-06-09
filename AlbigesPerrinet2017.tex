@@ -15,7 +15,7 @@
 \newcommand{\AuthorB}{Perrinet}
 \newcommand{\FirstNameB}{Laurent}
 
-\newcommand{\InstituteA}{Aix Marseille Univ., M1 NIC, Marseille, France}
+\newcommand{\InstituteA}{Aix Marseille Université, M1 NIC, Marseille, France}
 \newcommand{\InstituteB}{CNRS, INT, Marseille, France}
 
 \newcommand{\AddressB}{27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}
@@ -25,7 +25,7 @@
 \newcommand{\EmailB}{laurent.perrinet@univ-amu.fr}
 
 \newcommand{\Title}{Modèle de rétine neuromimétique basé sur l'utilisation de logiciels Open-source}
-\newcommand{\Conference}{Présenté le jeudi, 15 juin 2017 à l'Université d'Aix-Marseille, Marseille, France}
+\newcommand{\Conference}{Présenté le 15 juin 2017 à l'Université d'Aix-Marseille, Marseille, France, dans le cadre de l'évaluation de l'unité d'enseignement ENSNEBU11}
 \newcommand{\Keywords}{Rétine, Biomimétisme, RaspBerry Pi, Neurosciences computationnelles, Python}
 
 % --------------------------------------------------------------------------
@@ -34,37 +34,57 @@
 
 \newcommand{\FigureUnprocPic}{
 \begin{figure}[!h]
-\centering{\includegraphics[width=\linewidth]{unproc_fig.png}}
+\centering{\includegraphics[width=0.7\linewidth]{unproc_fig.png}}
+\caption{Image brute capturée par une caméra distante, représentée sous forme d'un numpy array}
 \end{figure}
 }
 
 \newcommand{\FigureProcPic}{
 \begin{figure}[!h]
-\centering{\includegraphics[width=\linewidth]{proc_fig.png}}
+\centering{\includegraphics[width=0.7\linewidth]{proc_fig.png}}
+\caption{Image après un traitement révélant les contrastes, représentée sous la forme d'un nympy array}
+\end{figure}
+}
+
+\newcommand{\FigureRetinaPic}{
+\begin{figure}[!h]
+\centering{\includegraphics[width=0.5\linewidth]{eventRetina_capture.png}}
+\caption{Image après un traitement multi-couche ne révélant que les contours des objets en mouvement (extrait d'un affichage vidéo)}
 \end{figure}
 }
 
 \newcommand{\FigureBench}{
 \begin{figure}[!h]
 \centering{\includegraphics[width=0.7\linewidth]{benchmark_fig.png}}
+\caption{Graphique issue de l'étalonnage comparant deux méthodes de calcul de la vitesse de capture}
 \end{figure}
 }
 
 \newcommand{\FigureBiomimetism}{
 \begin{figure}
 \centering{\includegraphics[width=\linewidth]{biomimetism.pdf}}
+\caption{Comparaison schématique du fonctionnement de OpenRetina et du système biologique équivalent}
 \end{figure}
 }
 
 \newcommand{\FigureLayered}{
 \begin{figure}[!h]
 \centering{\includegraphics[width=\linewidth]{layered.pdf}}
+\caption{Représentation schématique du fonctionnement dans le temps d'une architecture en 3 couches}
 \end{figure}
 }
 
 \newcommand{\FigureNetwork}{
 \begin{figure}[!h]
 \includegraphics[width=0.7\linewidth]{Python_git.pdf}
+\caption{Représentation schématique de la méthodologie utilisée pour OpenRetina}
+\end{figure}
+}
+
+\newcommand{\FigureRaspPic}{
+\begin{figure}[!h]
+\centering{\includegraphics[width=0.3\linewidth]{raspberrypi.jpg}}
+\caption{Une RaspBerry Pi 2 et sa picamera, principal support physique utilisé pour OpenRetina}
 \end{figure}
 }
 
@@ -95,22 +115,24 @@
 \subsection*{Biomimétisme}
 \rule[40ex]{10cm}{1pt}\\
 Qu'est-ce que la biomimétique?\\
-La biomimétique consiste en la reproduction de fonctions et de capacités des systèmes biologiques dans des systèmes artificiels afin d'améliorer leurs performances.\\
+La biomimétique consiste en la \textbf{reproduction de fonctions et de capacités des systèmes biologiques dans des systèmes artificiels} afin d'améliorer leurs performances.\\
 L'objectif est donc de s'inspirer de ce que la sélection naturelle a permis d'obtenir au cours de l'évolution pour résoudre des problèmes d'ingénierie limitant les systèmes artificiels actuels : résistance et adaptabilité aux contraintes environnementales, collecte et utilisation de l'énergie dans l'environnement, autonomie dans les déplacements et les prises de décisions, ...\\
 
 L'ingénierie biomimétique est donc souvent utilisé dans le développement de technologies de pointe comme la robotique, mais aussi dans la recherche car il permet de mieux comprendre les mécanismes biologiques étudies.\\
 
-Dans le cadre de ce projet, c'est la rétine et le système visuel animal qui servent de modèle.\\
+Dans le cadre de ce projet, c'est la \textbf{rétine et le système visuel animal} qui servent de modèle.\\
 \FigureBiomimetism
 
 \subsection*{Low-Tech}
 \rule[40ex]{10cm}{1pt}\\
-L'une des limites actuelles de l'ingénierie touche à la puissance de calcul des systèmes utilisés.\\
+L'une des limites actuelles de l'ingénierie touche à la \textbf{puissance de calcul} des systèmes utilisés.\\
 
 L'ingenerie "high-tech" cherche à créer les systèmes les plus performants possibles sans se soucier de la consommation d'énergie et de puissance de calcul.\\
 En réponse, l'ingénierie "low-tech" se concentre sur l'intégration de programmes dans des systèmes artificiels possédant une faible puissance de calcul ou une autonomie énergétique limitée, tels que les systèmes embarqués (drones, systèmes robotisés autonomes) ou répondant à des contraintes bien précises, tels que les rétines artifielles.\\
 
-Dans le cadre de OpenRetina, c'est une ingénerie low-tech et Open Source qui est visée, afin de permettre son adaptation et son utilisation par le plus de systèmes possible.
+Dans le cadre de OpenRetina, c'est une \textbf{ingénerie low-tech et Open Source} qui est visée, afin de permettre son adaptation et son utilisation par le plus de systèmes possible.\\
+
+\FigureRaspPic
 }
 
 \newcommand{\ParagMethComp}{
@@ -120,48 +142,49 @@ Ces scripts réalisent une série de taches qu'on peut décrire en 4 catégories
 \subsection*{Grab}
 \rule[40ex]{10cm}{1pt}\\
 Récupérer une image ou une vidéo à partir d'un fichier video, d'une caméra locale ou d'une caméra distante (connectée à une RaspBerry Pi).\\
-Cette étape est proche d'une prise d'image classique mais sert surtout à récupérer les informations enregistrées individuellement dans chaque pixel.\\
+Cette étape est proche d'une prise d'image classique mais sert surtout à récupérer les  \textbf{informations enregistrées individuellement dans chaque pixel}.\\
 \FigureUnprocPic\\
 
 \subsection*{Process}
 \rule[40ex]{10cm}{1pt}\\
-Réaliser un traitement sur chaque frame que comporte l'image, afin de réduire la quantité d'informations transmises et d'accélerer la temporalité de la perception.\\
+Réaliser un traitement sur chaque frame que comporte l'image, afin de \textbf{réduire la quantité d'informations transmises et d'accélerer la temporalité de la perception, sans perte de résolution}.\\
+\FigureProcPic
 
 \subsection*{Network}
 \rule[40ex]{10cm}{1pt}\\
-Transmettre les informations (requêtes ou données) entre les acteurs.\\
+Transmettre les informations (requêtes ou données) entre les acteurs au travers un \textbf{protocole ssh} et l'utilisation de la \textbf{bibliothèque zeroMQ}.\\
 
 \subsection*{Display}
 \rule[40ex]{10cm}{1pt}\\
 Afficher l'image nouvellement traitée afin de contrôler les résultats.\\
-\FigureProcPic
+\FigureRetinaPic
 }
 
 \newcommand{\ParagAmelio}{
 \begin{itemize}
-\item Travailler avec des videos pour réaliser des traitements hors-ligne\\
-\item Réaliser un "benchmark" pour contrôler l'influence de certains paramètres\\
+\item Récupération des informations captées par la caméra pour reconstruire un fichier vidéo permettant de réaliser des \textbf{traitements hors-ligne et à postériori}\\
+\item Réalisation d'\textbf{étalonnages} pour contrôler l'influence de certains paramètres sur les performances du système\\
 \end{itemize}
 \FigureBench
 \begin{itemize}
-\item Architecture en couches\\
+\item Complexification du programme pour construire une \textbf{architecture en couches} : divise la charge de travail entre plusieurs acteurs, localise les erreurs et facilite la compréhension et les modifications\\
 \end{itemize}
 \FigureLayered
 }
 
 \newcommand{\ParagCompAcqu}{
 \begin{itemize}
-\item Methodologie (python, notamment OOP; utilisation et maintien d'un logbook; utilisation de git; communications à distance via les protocoles ssh, approfondissement des connaissances en \LaTeX)\\
+\item Methodologie : approfondissement des \textbf{connaissances en Python} (notamment en programmation orientée objet) et en \LaTeX, utilisation et maintien d'un \textbf{logbook}, utilisation de \textbf{git} pour gérer efficacement des versions, communications à distance via les \textbf{protocoles ssh} et \textbf{zeroMQ}\\
 \FigureNetwork
 \\
 \item Méthodes de traitement d'images et de vidéos\\
-\item Compétences d'ingénierie et de reverse-engineering.\\
+\item Compétences d'ingénierie et de \textbf{reverse-engineering}.\\
 \item Connaissances neuroscientifiques dans les domaines de la perception et du traitement de l'information visuelle.
 \end{itemize}
 }
 
 %##################################################################################################################################
-\documentclass[14pt, portrait, a0, plainsections, \Draft]{sciposter}
+\documentclass[25pt, portrait, a0, plainsections,\Draft]{sciposter}
 %\usepackage[dvipsnames]{x}
 \usepackage{multicol}
 \usepackage{xcolor}
@@ -183,12 +206,12 @@ Afficher l'image nouvellement traitée afin de contrôler les résultats.\\
        supscaled=1.2,%
        raised=-.13em]{superiors}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[unicode,linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,pdfborder={0 0 0}]{hyperref}%
-\hypersetup{%
-pdftitle={\Title},%
-pdfauthor={Corresponding author: \AuthorB < \EmailB > \AddressB - \WebsiteB },%
-pdfkeywords={\Keywords}%
-}%
+\usepackage[unicode,linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,pdfborder={0 0 0}]{hyperref}
+\hypersetup{
+pdftitle={\Title},
+pdfauthor={Corresponding author: \AuthorB < \EmailB > \AddressB - \WebsiteB },
+pdfkeywords={\Keywords}
+}
 %\usepackage{url}            % simple URL typesetting
 %\usepackage{booktabs}       % professional-quality tables
 %\usepackage{amsfonts}       % blackboard math symbols
@@ -211,17 +234,17 @@ pdfkeywords={\Keywords}%
 \newcounter{myfigure}
 \setcounter{myfigure}{1}
 \renewcommand{\caption}[1]{
-  \vspace{0.25cm}
+  \vspace{0.5cm}
   \begin{quote}
     {{\sc Figure} \arabic{myfigure}: #1}
   \end{quote}
-  \vspace{.5cm}
+  \vspace{1cm}
   \stepcounter{myfigure}
-}%
-%
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 \renewcommand{\titlesize}{\Huge}%
@@ -229,19 +252,19 @@ pdfkeywords={\Keywords}%
 
 % The following commands can be used to alter the default logo settings
 \leftlogo[1.2]{logo_amu_rvb.jpg} % defines logo to left of title (with scale factor)
-\rightlogo[1.2]{logoINT.jpg}      % same but on right
+\rightlogo[1.2]{logoINT.jpg}     % same but on right
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
 \author{
-{\FirstNameA\ \AuthorA\ } 
-{\FirstNameB\ \AuthorB\ }
+{\FirstNameA\ \AuthorA\up{1}}, 
+{\FirstNameB\ \AuthorB\up{2}}
 }
 
 \institute{
-{\InstituteA }
-{\InstituteB }
+{\up{1}\InstituteA}
+{\up{2}\InstituteB}
 }           
 \begin{document}
 \conference{\Conference}
@@ -255,7 +278,6 @@ pdfkeywords={\Keywords}%
 \section*{Motivations du projet}
 \rule[40ex]{\linewidth}{3pt}\\
 \ParagMotiv
-\vfill
 \columnbreak
 
 \section*{Méthodes computationnelles}
@@ -263,7 +285,7 @@ pdfkeywords={\Keywords}%
 \ParagMethComp
 \columnbreak
 
-\section*{Améliorations apportées au projet}
+\section*{Avancées apportées au projet}
 \rule[40ex]{\linewidth}{3pt}\\
 \ParagAmelio
 

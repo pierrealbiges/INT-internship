@@ -13,6 +13,6 @@ camera = eventRetina(model=dict(layer='output', title='A three layered network: 
                                  input=['stream'], # input: can be the camera, noise, a movie (TODO)
                                  in_port=5556,
                                  output=['display', 'capture'], # output: can be stream, display, capture,...
-                                 name_capture='eventRetina_capture.png',
-                                 T_SIM=5, sparseness=0.01), verb=True)
+                                 name_capture = 'event_capture',
+                                 T_SIM=5, sparseness=0.01))
 camera.run()

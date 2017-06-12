@@ -12,7 +12,8 @@ phrs = eventRetina(model=dict(layer='GCs', # label for this layer
                              input=['stream'], # input: can be the camera, noise, a movie (TODO)
                              in_port=5555,
                              output=['stream'], # output: can be stream, display, ...
+                             name_capture = 'retina_capture',
                              out_port=5556
-                             ), verb=True)
+                             ))
 print
 phrs.run()

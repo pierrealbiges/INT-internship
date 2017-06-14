@@ -24,7 +24,7 @@
 \newcommand{\EmailA}{pierre.albiges@etu.univ-amu.fr}
 \newcommand{\EmailB}{laurent.perrinet@univ-amu.fr}
 
-\newcommand{\Title}{Modèle de rétine neuromimétique basé sur l'utilisation de logiciels Open-source}
+\newcommand{\Title}{Modèle de rétine neuromimétique basé sur l'utilisation du projet OpenRetina}
 \newcommand{\Conference}{Présenté le 15 juin 2017 à l'Université d'Aix-Marseille, Marseille, France, dans le cadre de l'évaluation de l'unité d'enseignement ENSNEBU11}
 \newcommand{\Keywords}{Rétine, Biomimétisme, RaspBerry Pi, Neurosciences computationnelles, Python}
 
@@ -34,21 +34,21 @@
 
 \newcommand{\FigureUnprocPic}{
 \begin{figure}[!h]
-\centering{\includegraphics[width=0.7\linewidth]{unproc_fig.png}}
+\centering{\includegraphics[width=1\linewidth]{unproc_fig.png}}
 \caption{Image brute capturée par une caméra distante, représentée sous forme d'un numpy array}
 \end{figure}
 }
 
 \newcommand{\FigureProcPic}{
 \begin{figure}[!h]
-\centering{\includegraphics[width=0.7\linewidth]{proc_fig.png}}
+\centering{\includegraphics[width=1\linewidth]{proc_fig.png}}
 \caption{Image après un traitement révélant les contrastes, représentée sous la forme d'un nympy array}
 \end{figure}
 }
 
 \newcommand{\FigureRetinaPic}{
 \begin{figure}[!h]
-\centering{\includegraphics[width=0.5\linewidth]{eventRetina_capture.png}}
+\centering{\includegraphics[width=0.6\linewidth]{eventRetina_capture.png}}
 \caption{Image après un traitement multi-couche ne révélant que les contours des objets en mouvement (extrait d'un affichage vidéo)}
 \end{figure}
 }
@@ -62,14 +62,14 @@
 
 \newcommand{\FigureBiomimetism}{
 \begin{figure}
-\centering{\includegraphics[width=\linewidth]{biomimetism.pdf}}
+\centering{\includegraphics[width=1.125\linewidth]{biomimetism.pdf}}
 \caption{Comparaison schématique du fonctionnement de OpenRetina et du système biologique équivalent}
 \end{figure}
 }
 
 \newcommand{\FigureLayered}{
 \begin{figure}[!h]
-\centering{\includegraphics[width=\linewidth]{layered.pdf}}
+\centering{\includegraphics[width=1.2\linewidth]{layered.pdf}}
 \caption{Représentation schématique du fonctionnement dans le temps d'une architecture en 3 couches}
 \end{figure}
 }
@@ -83,7 +83,7 @@
 
 \newcommand{\FigureRaspPic}{
 \begin{figure}[!h]
-\centering{\includegraphics[width=0.3\linewidth]{raspberrypi.jpg}}
+\centering{\includegraphics[width=0.7\linewidth]{raspberrypi.jpg}}
 \caption{Une RaspBerry Pi 2 et sa picamera, principal support physique utilisé pour OpenRetina}
 \end{figure}
 }
@@ -112,62 +112,64 @@
 % --------------------------------------------------------------------------
 
 \newcommand{\ParagMotiv}{
-\subsection*{Biomimétisme}
-\rule[40ex]{10cm}{1pt}\\
-Qu'est-ce que la biomimétique?\\
-La biomimétique consiste en la \textbf{reproduction de fonctions et de capacités des systèmes biologiques dans des systèmes artificiels} afin d'améliorer leurs performances.\\
+\subsection*{\underline{Biomimétisme\hspace{0.25\linewidth}}}
+\rule[0.75\baselineskip]{0pt}{\baselineskip}
+La biomimétique consiste en la \textbf{reproduction de fonctions et de capacités des systèmes biologiques dans des systèmes artificiels}.\\
+
 L'objectif est donc de s'inspirer de ce que la sélection naturelle a permis d'obtenir au cours de l'évolution pour résoudre des problèmes d'ingénierie limitant les systèmes artificiels actuels : résistance et adaptabilité aux contraintes environnementales, collecte et utilisation de l'énergie dans l'environnement, autonomie dans les déplacements et les prises de décisions, ...\\
 
-L'ingénierie biomimétique est donc souvent utilisé dans le développement de technologies de pointe comme la robotique, mais aussi dans la recherche car il permet de mieux comprendre les mécanismes biologiques étudies.\\
+L'ingénierie biomimétique est régulièrement utilisé dans le développement de technologies de pointe comme la robotique, mais aussi dans la recherche car il permet de mieux comprendre les mécanismes biologiques étudies.\\
 
-Dans le cadre de ce projet, c'est la \textbf{rétine et le système visuel animal} qui servent de modèle.\\
+Dans le cadre de OpenRetina, c'est la \textbf{rétine et le système visuel animal} qui servent de modèle.
 \FigureBiomimetism
 
-\subsection*{Low-Tech}
-\rule[40ex]{10cm}{1pt}\\
+\rule[3.2\baselineskip]{0pt}{\baselineskip}
+
+\subsection*{\underline{Low-tech\hspace{0.35\linewidth}}}
+\rule[0.75\baselineskip]{0pt}{\baselineskip}
 L'une des limites actuelles de l'ingénierie touche à la \textbf{puissance de calcul} des systèmes utilisés.\\
 
-L'ingenerie "high-tech" cherche à créer les systèmes les plus performants possibles sans se soucier de la consommation d'énergie et de puissance de calcul.\\
-En réponse, l'ingénierie "low-tech" se concentre sur l'intégration de programmes dans des systèmes artificiels possédant une faible puissance de calcul ou une autonomie énergétique limitée, tels que les systèmes embarqués (drones, systèmes robotisés autonomes) ou répondant à des contraintes bien précises, tels que les rétines artifielles.\\
+En oppositon de l'ingénierie "high-tech", l'\textbf{ingénierie "low-tech"} se concentre sur l'intégration de programmes dans des systèmes artificiels possédant une \textbf{faible puissance de calcul} ou une \textbf{autonomie énergétique limitée} : systèmes embarqués (drones, systèmes robotisés autonomes) ou répondant à des contraintes particulières, tels que les rétines artifielles.\\
 
-Dans le cadre de OpenRetina, c'est une \textbf{ingénerie low-tech et Open Source} qui est visée, afin de permettre son adaptation et son utilisation par le plus de systèmes possible.\\
+Dans le cadre de OpenRetina, c'est une \textbf{ingénerie low-tech et Open Source} qui est visée, afin de permettre sa diffusion et son utilisation par le plus de systèmes possible.\\
 
 \FigureRaspPic
 }
 
 \newcommand{\ParagMethComp}{
-Le projet OpenRetina est composé d'un ensemble de programmes majoritairement écrits dans le language de programmation Python.\\
-Ces scripts réalisent une série de taches qu'on peut décrire en 4 catégories, ci-dessous :\\
+OpenRetina est composé d'un ensemble de programmes majoritairement écrits dans le language de programmation Python.\\
+Ces scripts réalisent une série de taches qu'on peut diviser en catégories :\\
 
-\subsection*{Grab}
-\rule[40ex]{10cm}{1pt}\\
+\subsection*{\underline{Grab\hspace{0.45\linewidth}}}
+\rule[0.75\baselineskip]{0pt}{\baselineskip}
 Récupérer une image ou une vidéo à partir d'un fichier video, d'une caméra locale ou d'une caméra distante (connectée à une RaspBerry Pi).\\
-Cette étape est proche d'une prise d'image classique mais sert surtout à récupérer les  \textbf{informations enregistrées individuellement dans chaque pixel}.\\
-\FigureUnprocPic\\
+\FigureUnprocPic
 
-\subsection*{Process}
-\rule[40ex]{10cm}{1pt}\\
-Réaliser un traitement sur chaque frame que comporte l'image, afin de \textbf{réduire la quantité d'informations transmises et d'accélerer la temporalité de la perception, sans perte de résolution}.\\
+\subsection*{\underline{Process\hspace{0.41\linewidth}}}
+\rule[0.75\baselineskip]{0pt}{\baselineskip}
+Réaliser un traitement sur chaque frame que comporte la capture, afin de \textbf{réduire la quantité d'informations transmises} et d'\textbf{accélerer la temporalité de la perception, sans perte de résolution}.\\
 \FigureProcPic
 
-\subsection*{Network}
-\rule[40ex]{10cm}{1pt}\\
+\subsection*{\underline{Network\hspace{0.4\linewidth}}}
+\rule[0.75\baselineskip]{0pt}{\baselineskip}
 Transmettre les informations (requêtes ou données) entre les acteurs au travers un \textbf{protocole ssh} et l'utilisation de la \textbf{bibliothèque zeroMQ}.\\
 
-\subsection*{Display}
-\rule[40ex]{10cm}{1pt}\\
-Afficher l'image nouvellement traitée afin de contrôler les résultats.\\
+\rule[0.9\baselineskip]{0pt}{\baselineskip}
+
+\subsection*{\underline{Display\hspace{0.42\linewidth}}}
+\rule[0.75\baselineskip]{0pt}{\baselineskip}
+Afficher le résultat du traitement afin d'en contrôler les résultats.\\
 \FigureRetinaPic
 }
 
 \newcommand{\ParagAmelio}{
 \begin{itemize}
 \item Récupération des informations captées par la caméra pour reconstruire un fichier vidéo permettant de réaliser des \textbf{traitements hors-ligne et à postériori}\\
-\item Réalisation d'\textbf{étalonnages} pour contrôler l'influence de certains paramètres sur les performances du système\\
+\item Réalisation d'\textbf{étalonnages} pour contrôler l'influence de certains paramètres sur les performances du système
 \end{itemize}
 \FigureBench
 \begin{itemize}
-\item Complexification du programme pour construire une \textbf{architecture en couches} : divise la charge de travail entre plusieurs acteurs, localise les erreurs et facilite la compréhension et les modifications\\
+\item Complexification du programme pour construire une \textbf{architecture en couches} : divise la charge de travail entre plusieurs acteurs, localise les erreurs et facilite la compréhension et les modifications
 \end{itemize}
 \FigureLayered
 }
@@ -175,8 +177,9 @@ Afficher l'image nouvellement traitée afin de contrôler les résultats.\\
 \newcommand{\ParagCompAcqu}{
 \begin{itemize}
 \item Methodologie : approfondissement des \textbf{connaissances en Python} (notamment en programmation orientée objet) et en \LaTeX, utilisation et maintien d'un \textbf{logbook}, utilisation de \textbf{git} pour gérer efficacement des versions, communications à distance via les \textbf{protocoles ssh} et \textbf{zeroMQ}\\
+\end{itemize}
 \FigureNetwork
-\\
+\begin{itemize}
 \item Méthodes de traitement d'images et de vidéos\\
 \item Compétences d'ingénierie et de \textbf{reverse-engineering}.\\
 \item Connaissances neuroscientifiques dans les domaines de la perception et du traitement de l'information visuelle.
@@ -223,8 +226,8 @@ pdfkeywords={\Keywords}
 \if 1\Draft
 \usepackage{setspace}
 \fi
-\usepackage{siunitx}
-\usepackage{graphicx}
+%\usepackage{siunitx}
+%\usepackage{graphicx}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 \renewcommand{\labelitemi}{∙}
 
@@ -234,14 +237,13 @@ pdfkeywords={\Keywords}
 \newcounter{myfigure}
 \setcounter{myfigure}{1}
 \renewcommand{\caption}[1]{
-  \vspace{0.5cm}
+  \vspace{0.25cm}
   \begin{quote}
     {{\sc Figure} \arabic{myfigure}: #1}
   \end{quote}
   \vspace{1cm}
   \stepcounter{myfigure}
 }
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -276,21 +278,21 @@ pdfkeywords={\Keywords}
 \begin{multicols}{3}
 
 \section*{Motivations du projet}
-\rule[40ex]{\linewidth}{3pt}\\
+\rule[30ex]{\linewidth}{3pt}\\
 \ParagMotiv
 \columnbreak
 
 \section*{Méthodes computationnelles}
-\rule[40ex]{\linewidth}{3pt}\\
+\rule[30ex]{\linewidth}{3pt}\\
 \ParagMethComp
 \columnbreak
 
 \section*{Avancées apportées au projet}
-\rule[40ex]{\linewidth}{3pt}\\
+\rule[30ex]{\linewidth}{3pt}\\
 \ParagAmelio
 
 \section*{Compétences acquises}
-\rule[40ex]{\linewidth}{3pt}\\
+\rule[30ex]{\linewidth}{3pt}\\
 \ParagCompAcqu
 
 \end{multicols}
